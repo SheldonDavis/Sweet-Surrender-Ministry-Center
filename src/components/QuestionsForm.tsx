@@ -13,16 +13,20 @@ interface SubmissionStatus{
   responseText:string;
 }
 
-async function sendNotification(target:EventTarget){
+async function sendNotification(target:HTMLFormElement){
   let {ContactEmail, Question} = target
+  // console.log(target)
+  // console.log(ContactEmail.value)
+  // console.log(Question.value)
+  // return
   ContactEmail = ContactEmail.value
   Question = Question.value
 
   //make sure email is valid
-  if(!EMAIL_REGEX.test(ContactEmail)) return {status:'error',responseText:'Bad Contact Email'}  
+  if(!EMAIL_REGEX.test(ContactEmail)) return {status:'error',responseText:'Bad Contact Email'}
   Question = JSON.stringify(Question)
   try {
-    
+
     let theBody = ``
     theBody+=`<p><strong>New contact form submission from: ${ContactEmail}</strong></p>`
     theBody+=`<p>They would like to know:</p>`
@@ -32,7 +36,7 @@ async function sendNotification(target:EventTarget){
       emailSubject:"testing email submission through website",
       emailBody:theBody,
     }
-      
+
     await emailjs.send(ENV.VITE_EMAILJS_SERVICE_ID, ENV.VITE_EMAILJS_TEMPLATE_ID, templateParams, ENV.VITE_EMAILJS_PUBLIC_API_KEY)
       .then((result) => {
           console.log(result.text);
@@ -50,12 +54,12 @@ async function sendNotification(target:EventTarget){
 
 function QuestionsForm(){
 
-            
+
         const [submissionResponse, setSubmissionResponse] = useState<SubmissionStatus>({status:'',responseText:''})
 
-        async function handleSubmit(e:FormEvent){
+        async function handleSubmit(e: FormEvent<HTMLFormElement>){
             e.preventDefault()
-            const target:EventTarget = e?.target
+            const target = e?.currentTarget           
             if(!target) return 'target does not exists'
             const res = await sendNotification(target)
             // console.log(res)
@@ -74,7 +78,7 @@ function QuestionsForm(){
                 <span>{submissionResponse.responseText}</span>
             </div>
 
-            <form onSubmit={handleSubmit} >           
+            <form onSubmit={handleSubmit} >
                 <p>
                     <label htmlFor="ContactEmail">Contact Email:</label>&nbsp;
                     <input type='email' id='ContactEmail' name='ContactEmail' required placeholder='example@example.com'></input>

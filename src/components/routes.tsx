@@ -3,7 +3,7 @@ import {Routes, Route} from 'react-router-dom'
 //importing pages
 import Whoops from '../pages/404';
 import Home from '../pages/home';
-import About from '../pages/about';
+// import About from '../pages/about';
 import Contact from '../pages/contact';
 import Donate from '../pages/donate';
 import Legal from '../pages/legal';

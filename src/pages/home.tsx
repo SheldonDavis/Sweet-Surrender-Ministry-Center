@@ -1,7 +1,7 @@
 
-import { useState, useEffect } from 'react'
-import {getDocs, collection} from "firebase/firestore"
-import {db} from '../config/firebaseConfig.tsx';
+// import { useState, useEffect } from 'react'
+// import {getDocs, collection} from "firebase/firestore"
+// import {db} from '../config/firebaseConfig.tsx';
 import NAV from '../components/nav';
 
 //importing components
@@ -11,37 +11,37 @@ import VisionOfTheFuture from '../components/VisionOfTheFuture.tsx';
 import CoreValues from '../components/CoreValues.tsx';
 import HowToHelp from '../components/HowToHelp.tsx';
 
-interface User{
-  id:string;
-  name?:string;
-  age?:number;
-}
+// interface User{
+//   id:string;
+//   name?:string;
+//   age?:number;
+// }
 
-async function fetchAllDataFromFirestore(){
-  const querySnapshot = await getDocs(collection(db,"users"))
-  const data:Array<User> = [];  
-  querySnapshot.forEach((doc)=>{
-    data.push({id:doc.id, ...doc.data()});
-  })
-  return data
-}
+// async function fetchAllDataFromFirestore(){
+//   const querySnapshot = await getDocs(collection(db,"users"))
+//   const data:Array<User> = [];  
+//   querySnapshot.forEach((doc)=>{
+//     data.push({id:doc.id, ...doc.data()});
+//   })
+//   return data
+// }
 
 function Home() {
 
-  const [data, setData] = useState<Array<User>>([]);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
+  // const [data, setData] = useState<Array<User>>([]);
+  // const [isLoading, setIsLoading] = useState<boolean>(true);
 
-  async function fetchData(){
-    const data:Array<User> = await fetchAllDataFromFirestore();
-    setData(data);
-  }
+  // async function fetchData(){
+  //   const data:Array<User> = await fetchAllDataFromFirestore();
+  //   setData(data);
+  // }
 
-  useEffect(()=>{
-    fetchData();
-  },[]);
-  useEffect(()=>{
-    setIsLoading(false);
-  },[data]);
+  // useEffect(()=>{
+  //   fetchData();
+  // },[]);
+  // useEffect(()=>{
+  //   setIsLoading(false);
+  // },[data]);
 
 
 
@@ -49,7 +49,7 @@ function Home() {
     <>
         <NAV/>
         <WhoWeAre 
-          setIsLoading={setIsLoading}
+          //setIsLoading={setIsLoading}
         />
         <VisionOfTheFuture/>
         <HowToHelp/>
