@@ -34,7 +34,7 @@ function ProjectsList(){
         },
     ]
     return(
-        <>
+        <article id={`ProjectList`}>
             <h3>Project List</h3>
             {
                 projectData.map((project, i)=>{
@@ -43,7 +43,7 @@ function ProjectsList(){
                 })
             }
             {/* <Project title={`testing`} image={`file path`} description={[`this`,`is`,`it`]} orientation={true} /> */}
-        </>
+        </article>
     )
 }
 export default ProjectsList
