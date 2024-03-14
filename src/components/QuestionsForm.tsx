@@ -2,6 +2,10 @@ import emailjs from '@emailjs/browser';
 import { useState, useEffect } from 'react';
 import { FormEvent } from 'react';
 
+//icons
+import {faSpinner} from '@fortawesome/free-solid-svg-icons'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+
 //Environmental Variable prefix
 const ENV = import.meta.env
 
@@ -18,7 +22,7 @@ async function sendNotification(target:HTMLFormElement){
   // console.log(target)
   // console.log(ContactEmail.value)
   // console.log(Question.value)
-  // return
+  // return{status:'success',responseText:'success testings'}
   ContactEmail = ContactEmail.value
   Question = Question.value
 
@@ -54,22 +58,22 @@ async function sendNotification(target:HTMLFormElement){
 
 function QuestionsForm(){
 
-
         const [submissionResponse, setSubmissionResponse] = useState<SubmissionStatus>({status:'',responseText:''})
+        const [Loading,setLoading] = useState<boolean>(false)
 
         async function handleSubmit(e: FormEvent<HTMLFormElement>){
             e.preventDefault()
             const target = e?.currentTarget           
             if(!target) return 'target does not exists'
             const res = await sendNotification(target)
-            // console.log(res)
             setSubmissionResponse({status:res.status,responseText:res.responseText})
         }
 
         useEffect(()=>{
-            setTimeout(function(){
+          setLoading(false)
+          setTimeout(function(){
             setSubmissionResponse({status:'',responseText:''})
-            },30000)
+          },30000)
         },[submissionResponse])
 
     return(
@@ -78,17 +82,25 @@ function QuestionsForm(){
                 <span>{submissionResponse.responseText}</span>
             </div>
 
-            <form onSubmit={handleSubmit} >
+            <form onSubmit={()=>{setLoading(true);handleSubmit}} >
                 <p>
                     <label htmlFor="ContactEmail">Contact Email:</label>&nbsp;
-                    <input type='email' id='ContactEmail' name='ContactEmail' required placeholder='example@example.com'></input>
+                    <input type='email' id='ContactEmail' name='ContactEmail' required placeholder='example@example.com'/>
                 </p>
                 <p>
                     <label htmlFor="Question">Ask a question:</label><br/>
                     <textarea id='Question' name='Question' required placeholder='I would like to know more about...' rows={10} ></textarea>
                 </p>
                 <p>
-                <button type='submit'>Send</button>
+                  {
+                    Loading?(
+                      <>
+                      <FontAwesomeIcon icon={faSpinner} title='sending email' cursor='loading' spin/>
+                      </>
+                    ):(
+                      <button type='submit'>Send</button>
+                    )
+                  }
                 {/* <input type='submit' value='Submit'/> */}
                 </p>
             </form>
