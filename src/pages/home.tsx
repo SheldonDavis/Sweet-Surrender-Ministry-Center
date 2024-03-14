@@ -10,6 +10,7 @@ import OurMission from '../components/OurMission.tsx';
 import VisionOfTheFuture from '../components/VisionOfTheFuture.tsx';
 import CoreValues from '../components/CoreValues.tsx';
 import HowToHelp from '../components/HowToHelp.tsx';
+import ProjectsList from '../components/ProjectsList.tsx';
 
 // interface User{
 //   id:string;
@@ -55,6 +56,7 @@ function Home() {
         <HowToHelp/>
         <OurMission/>
         <CoreValues/>
+        <ProjectsList/>
 
         {
           /*
