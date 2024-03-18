@@ -109,13 +109,6 @@
   font-style: italic;
 }
 
-/**Numans style**/
-.numans-regular {
-  font-family: "Numans", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
 /**mulish**/
 .mulish {
   font-family: "Mulish", sans-serif;
@@ -123,6 +116,7 @@
   font-style: normal;
   /* font-weight: <weight>; */
 }
+
 
 h1 {
   /*
@@ -137,25 +131,32 @@ h1 {
 }
 h3 {
   /*
-    ?font: Numans
+    ?font: Mulish
     ?weight: 400
     ?size: 40px
   */
   font-family: "Mulish", sans-serif;
+  font-family: "Trirong", serif;
   font-weight: 400;
   font-style: italic;
   font-size: 40px;
 }
-p {
+p, a{
   /*
     ?font: Mulish
     ?weight: 400
     ?size: 20px
     ?
   */
-  font-family: "Numans", sans-serif;
-  font-weight: 400;
+  font-family: "Mulish", sans-serif;
+  font-weight: 200;
   font-size: 20px;
+}
+p strong{
+  font-weight:700;
+}
+p i{
+  font-style:italic;
 }
 
 /*custom styles for testing*/
@@ -168,8 +169,9 @@ header {
 }
 
 header a.active {
-  font-size: 3.2em;
-  line-height: 1.1;
+  /* font-size: 3.2em;
+  line-height: 1.1; */
+  border-bottom:2px solid #646cff;
 }
 
 body {
@@ -236,4 +238,8 @@ article {
 img {
     display: block;
     width: 100%;
+}
+
+li p {
+  text-align: left;
 }
