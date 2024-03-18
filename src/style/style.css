@@ -1,74 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Numans&family=Trirong:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/**Trirong Classes**/
+.trirong-thin {
+  font-family: "Trirong", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.trirong-extralight {
+  font-family: "Trirong", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.trirong-light {
+  font-family: "Trirong", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.trirong-regular {
+  font-family: "Trirong", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.trirong-medium {
+  font-family: "Trirong", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.trirong-semibold {
+  font-family: "Trirong", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.trirong-bold {
+  font-family: "Trirong", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.trirong-extrabold {
+  font-family: "Trirong", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.trirong-black {
+  font-family: "Trirong", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.trirong-thin-italic {
+  font-family: "Trirong", serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.trirong-extralight-italic {
+  font-family: "Trirong", serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.trirong-light-italic {
+  font-family: "Trirong", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.trirong-regular-italic {
+  font-family: "Trirong", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.trirong-medium-italic {
+  font-family: "Trirong", serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.trirong-semibold-italic {
+  font-family: "Trirong", serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.trirong-bold-italic {
+  font-family: "Trirong", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.trirong-extrabold-italic {
+  font-family: "Trirong", serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.trirong-black-italic {
+  font-family: "Trirong", serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+/**Numans style**/
+.numans-regular {
+  font-family: "Numans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/**mulish**/
+.mulish {
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  /* font-weight: <weight>; */
+}
+
+h1 {
+  /*
+    ?font: TriRong
+    ?weight: 400
+    ?size: 80px
+  */
+  font-family: "Trirong", serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 80px;
+}
+h3 {
+  /*
+    ?font: Numans
+    ?weight: 400
+    ?size: 40px
+  */
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 40px;
+}
+p {
+  /*
+    ?font: Mulish
+    ?weight: 400
+    ?size: 20px
+    ?
+  */
+  font-family: "Numans", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+
 /*custom styles for testing*/
-header{
-    display:flex;
-    flex-wrap: wrap;
-    gap:1em;
-    justify-content: center;
-    align-items:center;
+header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
 }
 
-header a.active{
-    font-size: 3.2em;
-    line-height: 1.1;
+header a.active {
+  font-size: 3.2em;
+  line-height: 1.1;
 }
 
-body{
-    place-items:normal;
+body {
+  place-items: normal;
 }
-textarea{
-    width:100%;
-    resize:none;
+textarea {
+  width: 100%;
+  resize: none;
 }
-
-
 
 .subNotificationTile {
-    position: fixed;
-    width: 100%;
-    top: -50px;
-    left: 0;
-    transition: top ease-in-out .25s;
+  position: fixed;
+  width: 100%;
+  top: -50px;
+  left: 0;
+  transition: top ease-in-out 0.25s;
 }
 
 .subNotificationTile span {
-    padding: .25rem .75rem;
-    border-bottom-right-radius: .25rem;
-    border-bottom-left-radius: 0.25rem;
-    background-color: rgba(0,0,0,60%);
-    transition: background-color ease-in-out .25s;
+  padding: 0.25rem 0.75rem;
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  background-color: rgba(0, 0, 0, 60%);
+  transition: background-color ease-in-out 0.25s;
 }
 
-.subNotificationTile.active  {
-    top: 0;
+.subNotificationTile.active {
+  top: 0;
 }
 
 .subNotificationTile.good span {
-    background-color: rgba(0, 255, 77, 60%);
+  background-color: rgba(0, 255, 77, 60%);
 }
 
 .subNotificationTile.bad span {
-    background-color: rgba(255, 0, 61, 60%);
+  background-color: rgba(255, 0, 61, 60%);
 }
 
-article{margin-bottom:5rem;}
+article {
+  margin-bottom: 5rem;
+}
 .projectCard {
-    background-color: rgba(255,255,255,.15);
-    padding: .75rem;
-    display:flex;
-    gap:.5rem;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction:column;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 0.75rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
 }
 
-.projectCard .projectText{
-    flex-grow:2;
+.projectCard .projectText {
+  flex-grow: 2;
 }
 
 .projectCard.rightToLeft {
-    direction: rtl;
+  direction: rtl;
 }
 
 .projectCard.leftToRight {
-    direction: ltr;
+  direction: ltr;
+}
+
+img {
+    display: block;
+    width: 100%;
 }
