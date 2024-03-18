@@ -5,7 +5,7 @@ function Whoops() {
   return (
     <>
       <NAV/>
-      <h2>Whoops...</h2>
+      <h1>Whoops... (404)</h1>
       <p>It looks like something went wrong here.</p>
     </>
   )

@@ -4,7 +4,7 @@ function Donate(){
     return(
         <>
         <NAV/>
-            <h2>~Donate~</h2>
+            <h1>~Donate~</h1>
         </>
     )
 }

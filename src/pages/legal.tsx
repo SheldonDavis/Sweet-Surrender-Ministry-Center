@@ -4,7 +4,7 @@ function Legal(){
     return(
         <>
         <NAV/>
-            <h2>~Legal~</h2>
+            <h1>~Legal~</h1>
         </>
     )
 }
