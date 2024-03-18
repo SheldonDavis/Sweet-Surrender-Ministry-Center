@@ -1,16 +1,15 @@
-
 // import { useState, useEffect } from 'react'
 // import {getDocs, collection} from "firebase/firestore"
 // import {db} from '../config/firebaseConfig.tsx';
-import NAV from '../components/nav';
+import NAV from "../components/nav";
 
 //importing components
-import WhoWeAre from '../components/WhoWeAre';
-import OurMission from '../components/OurMission.tsx';
-import VisionOfTheFuture from '../components/VisionOfTheFuture.tsx';
-import CoreValues from '../components/CoreValues.tsx';
-import HowToHelp from '../components/HowToHelp.tsx';
-import ProjectsList from '../components/ProjectsList.tsx';
+import WhoWeAre from "../components/WhoWeAre";
+import OurMission from "../components/OurMission.tsx";
+import VisionOfTheFuture from "../components/VisionOfTheFuture.tsx";
+import CoreValues from "../components/CoreValues.tsx";
+import HowToHelp from "../components/HowToHelp.tsx";
+import ProjectsList from "../components/ProjectsList.tsx";
 
 // interface User{
 //   id:string;
@@ -20,7 +19,7 @@ import ProjectsList from '../components/ProjectsList.tsx';
 
 // async function fetchAllDataFromFirestore(){
 //   const querySnapshot = await getDocs(collection(db,"users"))
-//   const data:Array<User> = [];  
+//   const data:Array<User> = [];
 //   querySnapshot.forEach((doc)=>{
 //     data.push({id:doc.id, ...doc.data()});
 //   })
@@ -28,7 +27,6 @@ import ProjectsList from '../components/ProjectsList.tsx';
 // }
 
 function Home() {
-
   // const [data, setData] = useState<Array<User>>([]);
   // const [isLoading, setIsLoading] = useState<boolean>(true);
 
@@ -44,22 +42,18 @@ function Home() {
   //   setIsLoading(false);
   // },[data]);
 
-
-
   return (
     <>
-        <NAV/>
-        <WhoWeAre 
-          //setIsLoading={setIsLoading}
-        />
-        <VisionOfTheFuture/>
-        <HowToHelp/>
-        <OurMission/>
-        <CoreValues/>
-        <ProjectsList/>
+      <NAV />
 
-        {
-          /*
+      <WhoWeAre />
+      <VisionOfTheFuture />
+      <HowToHelp />
+      <OurMission />
+      <CoreValues />
+      <ProjectsList />
+
+      {/*
         isLoading?
         <>
           <p>loading...</p>
@@ -75,10 +69,9 @@ function Home() {
             )
           })
           )
-          */
-        }
+          */}
     </>
-  )
+  );
 }
 
-export default Home
+export default Home;
