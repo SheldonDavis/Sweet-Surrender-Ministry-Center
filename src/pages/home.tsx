@@ -1,7 +1,6 @@
 // import { useState, useEffect } from 'react'
 // import {getDocs, collection} from "firebase/firestore"
 // import {db} from '../config/firebaseConfig.tsx';
-import NAV from "../components/nav";
 
 //importing components
 import WhoWeAre from "../components/WhoWeAre";
@@ -44,8 +43,7 @@ function Home() {
 
   return (
     <>
-      <NAV />
-
+      <h1>Sweet Surrender Ministry Center</h1>
       <WhoWeAre />
       <VisionOfTheFuture />
       <HowToHelp />
