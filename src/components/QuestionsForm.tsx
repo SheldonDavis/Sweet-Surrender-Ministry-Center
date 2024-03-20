@@ -19,13 +19,13 @@ interface SubmissionStatus{
 
 async function sendNotification(target:HTMLFormElement){
   let {ContactEmail, Question} = target
-  // console.log(target)
-  // console.log(ContactEmail.value)
-  // console.log(Question.value)
-  // return{status:'success',responseText:'success testings'}
   ContactEmail = ContactEmail.value
   Question = Question.value
 
+  // console.log(target)
+  // console.log(ContactEmail)
+  // console.log(Question)
+  // return{status:'success',responseText:'success testings'}
   //make sure email is valid
   if(!EMAIL_REGEX.test(ContactEmail)) return {status:'error',responseText:'Bad Contact Email'}
   Question = JSON.stringify(Question)
@@ -43,12 +43,12 @@ async function sendNotification(target:HTMLFormElement){
 
     await emailjs.send(ENV.VITE_EMAILJS_SERVICE_ID, ENV.VITE_EMAILJS_TEMPLATE_ID, templateParams, ENV.VITE_EMAILJS_PUBLIC_API_KEY)
       .then((result) => {
-          console.log(result.text);
+          console.log(`email sent with response: ${result.text}`);
       }, (error) => {
           console.error(`ERROR: ${error}`);
           return {status:'error',responseText:'An error has occured'}
       });
-    return {status:'success',responseText:'An email has been submitted.'}
+      return {status:'success',responseText:`An email has been submitted.`}
   } catch (err) {
     console.error(`ERROR: ${err}`)
     return {status:'error',responseText:'An error has occured'}
@@ -60,13 +60,18 @@ function QuestionsForm(){
 
         const [submissionResponse, setSubmissionResponse] = useState<SubmissionStatus>({status:'',responseText:''})
         const [Loading,setLoading] = useState<boolean>(false)
+        const [Message,setMessage] = useState<string>("")
 
         async function handleSubmit(e: FormEvent<HTMLFormElement>){
+            setLoading(true);
             e.preventDefault()
             const target = e?.currentTarget           
             if(!target) return 'target does not exists'
             const res = await sendNotification(target)
             setSubmissionResponse({status:res.status,responseText:res.responseText})
+            if(res.status==="success"){
+              setMessage("Thank you for sending in a quesiton.")
+            }
         }
 
         useEffect(()=>{
@@ -81,8 +86,14 @@ function QuestionsForm(){
             <div className={`subNotificationTile ${submissionResponse.status&&(`active`)} ${submissionResponse.status==='success'?(`good`):submissionResponse.status==='error'?(`bad`):('')} `}>
                 <span>{submissionResponse.responseText}</span>
             </div>
-
-            <form onSubmit={()=>{setLoading(true);handleSubmit}} >
+            {
+            Message?(
+              <>
+                <p>{Message}</p>
+              </>
+            ):(
+              <>
+            <form onSubmit={handleSubmit} >
                 <p>
                     <label htmlFor="ContactEmail">Contact Email:</label>&nbsp;
                     <input type='email' id='ContactEmail' name='ContactEmail' required placeholder='example@example.com'/>
@@ -104,6 +115,9 @@ function QuestionsForm(){
                 {/* <input type='submit' value='Submit'/> */}
                 </p>
             </form>
+            </> 
+          )
+          }
         </>
     )
 }
