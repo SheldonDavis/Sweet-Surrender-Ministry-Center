@@ -58,7 +58,7 @@ function WhoWeAre(){//props: Properties
         )} */}
         
             <article id='WhoWeAre'>
-                <h1>Who We Are</h1>
+                <h3>Who We Are</h3>
                 <p>We are a 501(c)(3) nonprofit newly organized in October 2023 that seeks to provide charitable services to individuals and families of Bedford County, PA. With an ambitious and eager beginning, this nonprofit is getting started with four foundational projects: Birthday Blessing Box, H.O.P.E. Box, Manna Monday, and Second Chance program. </p>
             </article>
     </>)
