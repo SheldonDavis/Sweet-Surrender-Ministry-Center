@@ -4,7 +4,7 @@
 
 //importing components
 import WhoWeAre from "../components/WhoWeAre";
-import OurMission from "../components/OurMission.tsx";
+import TheMission from "../components/TheMission.tsx";
 import VisionOfTheFuture from "../components/VisionOfTheFuture.tsx";
 import CoreValues from "../components/CoreValues.tsx";
 import HowToHelp from "../components/HowToHelp.tsx";
@@ -47,7 +47,7 @@ function Home() {
       <WhoWeAre />
       <VisionOfTheFuture />
       <HowToHelp />
-      <OurMission />
+      <TheMission />
       <CoreValues />
       <ProjectsList />
 

@@ -1,7 +1,7 @@
-function OurMission() {
+function TheMission() {
   return (
-    <article id={`OurMission`}>
-      <h3>Our Mission</h3>
+    <article id={`TheMission`}>
+      <h3>The Mission</h3>
       <p>
         Loving, Training, Equipping and Empowering the Least, the Last, and the
         Lost with the Love of God.
@@ -14,4 +14,4 @@ function OurMission() {
     </article>
   );
 }
-export default OurMission;
+export default TheMission;

@@ -86,38 +86,36 @@ function QuestionsForm(){
             <div className={`subNotificationTile ${submissionResponse.status&&(`active`)} ${submissionResponse.status==='success'?(`good`):submissionResponse.status==='error'?(`bad`):('')} `}>
                 <span>{submissionResponse.responseText}</span>
             </div>
-            {
-            Message?(
+          {Message?(
               <>
                 <p>{Message}</p>
               </>
-            ):(
-              <>
-            <form onSubmit={handleSubmit} >
-                <p>
-                    <label htmlFor="ContactEmail">Contact Email:</label>&nbsp;
-                    <input type='email' id='ContactEmail' name='ContactEmail' required placeholder='example@example.com'/>
-                </p>
-                <p>
-                    <label htmlFor="Question">Ask a question:</label><br/>
-                    <textarea id='Question' name='Question' required placeholder='I would like to know more about...' rows={10} ></textarea>
-                </p>
-                <p>
-                  {
-                    Loading?(
-                      <>
-                      <FontAwesomeIcon icon={faSpinner} title='sending email' cursor='loading' spin/>
-                      </>
-                    ):(
-                      <button type='submit'>Send</button>
-                    )
-                  }
-                {/* <input type='submit' value='Submit'/> */}
-                </p>
-            </form>
+          ):(
+            <>
+              <h3>Have a question for Sweet Surrender?</h3>
+              <form onSubmit={handleSubmit} >
+                  <p>
+                      <label htmlFor="ContactEmail">Your Email:</label>&nbsp;
+                      <input type='email' id='ContactEmail' name='ContactEmail' required placeholder='example@example.com'/>
+                  </p>
+                  <p>
+                      <label htmlFor="Question">Your Question:</label><br/>
+                      <textarea id='Question' name='Question' required placeholder='I would like to know more about...' rows={10} ></textarea>
+                  </p>
+                  <p>
+                    {
+                      Loading?(
+                        <>
+                        <FontAwesomeIcon icon={faSpinner} title='sending email' cursor='loading' spin/>
+                        </>
+                      ):(
+                        <button type='submit'>Send</button>
+                      )
+                    }
+                  </p>
+              </form>
             </> 
-          )
-          }
+          )}
         </>
     )
 }
