@@ -1,5 +1,5 @@
 import SiteRoutes from "./components/routes";
-import Nav from "./components/nav";
+import Nav from "./components/Header";
 
 function App(){
   return(

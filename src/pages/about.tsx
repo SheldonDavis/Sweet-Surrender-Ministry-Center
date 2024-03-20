@@ -4,7 +4,6 @@ import {useParams} from 'react-router-dom'
 
 
 import {db} from '../config/firebaseConfig.tsx';
-import NAV from '../components/nav.tsx'
 
 
 interface SlugData {
@@ -40,8 +39,6 @@ function About() {
 
     return(        
         <>
-            <NAV/>
-            
             {(JSON.stringify(data)==='{}') ?(
             <>
                 <p>no record found</p>
