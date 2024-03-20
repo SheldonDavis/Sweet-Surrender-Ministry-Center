@@ -15,7 +15,7 @@ function Project(props: Properties) {
         <img src={image} alt={title} />
       </p>
       <div className={`projectText`}>
-        <h3>Title: {title}</h3>
+        <h3>{title}</h3>
         {description.map((p, i) => {
           return <p key={i}>{p}</p>;
         })}
