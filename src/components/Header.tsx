@@ -2,7 +2,7 @@ import {NavLink} from 'react-router-dom'
 
 interface Link{
     text:string;
-    link:string;
+    url:string;
     optClasses:string;
     active:boolean;
 }
@@ -10,37 +10,37 @@ interface Link{
 const links:Array<Link> = [
     {
         text:'home',
-        link:'/',
+        url:'/',
         optClasses:'',
         active:true,
     },
     {
         text:'contact',
-        link:'/contact',
+        url:'/contact',
         optClasses:'',
         active:true,
     },
     {
         text:'about',
-        link:'/about',
+        url:'/about',
         optClasses:'',
         active:false,
     },
     {
         text:'other',
-        link:'/other',
+        url:'/other',
         optClasses:'',
         active:false,
     },
     {
         text:'donate',
-        link:'/donate',
+        url:'/donate',
         optClasses:'btn',
         active:true,
     },
     {
         text:'legal',
-        link:'/legal',
+        url:'/legal',
         optClasses:'',
         active:true,
     },
@@ -51,8 +51,9 @@ function Header() {
         <header>
             {links.map((page, i)=>{
                 return(
-                    page.active&&(<p key={`${page.text}_${i}`}><NavLink to={page.link} className={({isActive})=>isActive?`active`:``}>{page.text}</NavLink></p>)
+                    page.active&&(<p key={`${page.text}_${i}`}><NavLink to={page.url} className={`${page.optClasses}`}>{page.text}</NavLink></p>)
                 )
+                //
             })}
         </header>
     )
