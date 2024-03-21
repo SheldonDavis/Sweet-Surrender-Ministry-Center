@@ -1,13 +1,16 @@
 import SiteRoutes from "./components/routes";
-import Nav from "./components/Header";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import ComingSoon from "./pages/soon";
+
 const isLive = import.meta.env.VITE_IS_LIVE === "true"
 function App(){
   return(
     isLive?(
       <>
-        <Nav/>
+        <Header/>
         <SiteRoutes/>
+        <Footer/>
       </>
     ):(
       <ComingSoon/>

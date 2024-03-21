@@ -27,10 +27,10 @@ const links:Array<Link> = [
         active:false,
     },
     {
-        text:'other',
-        url:'/other',
+        text:'projects',
+        url:'/projects',
         optClasses:'',
-        active:false,
+        active:true,
     },
     {
         text:'donate',
@@ -42,7 +42,13 @@ const links:Array<Link> = [
         text:'legal',
         url:'/legal',
         optClasses:'',
-        active:true,
+        active:false,
+    },
+    {
+        text:'other',
+        url:'/other',
+        optClasses:'',
+        active:false,
     },
 ]
 function Header() {
