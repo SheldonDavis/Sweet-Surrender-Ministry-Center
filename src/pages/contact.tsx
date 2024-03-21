@@ -1,7 +1,7 @@
 //components
 import QuestionsForm from "../components/QuestionsForm";
 import Phone from "../components/PhoneInfo";
-import Mail from "../components/mailingInfo";
+import Mail from "../components/MailingInfo";
 
 
 function Contact(){
