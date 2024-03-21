@@ -49,12 +49,13 @@ function Header() {
    
     return(        
         <header>
-            {links.map((page, i)=>{
-                return(
-                    page.active&&(<p key={`${page.text}_${i}`}><NavLink to={page.url} className={`${page.optClasses}`}>{page.text}</NavLink></p>)
-                )
-                //
-            })}
+            <nav>
+                {links.map((page, i)=>{
+                    return(
+                        page.active&&(<p key={`${page.text}_${i}`}><NavLink to={page.url} className={`${page.optClasses}`}>{page.text}</NavLink></p>)
+                    )
+                })}
+            </nav>
         </header>
     )
 }
