@@ -349,5 +349,7 @@ form p{
   margin-bottom:.5em;
 }
 
+.imgH_25{max-height:25vh;}
+
 @media (min-width: 768px) {
 }
