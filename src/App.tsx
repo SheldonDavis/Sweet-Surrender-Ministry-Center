@@ -1,4 +1,4 @@
-import SiteRoutes from "./components/Routes";
+import SiteRoutes from "./components/routes";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ComingSoon from "./pages/soon";
