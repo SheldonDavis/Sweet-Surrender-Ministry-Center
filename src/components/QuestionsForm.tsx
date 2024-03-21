@@ -25,7 +25,7 @@ async function sendNotification(target:HTMLFormElement){
   // console.log(target)
   // console.log(ContactEmail)
   // console.log(Question)
-  // return{status:'success',responseText:'success testings'}
+  //return{status:'success',responseText:'success testings'}
   //make sure email is valid
   if(!EMAIL_REGEX.test(ContactEmail)) return {status:'error',responseText:'Bad Contact Email'}
   Question = JSON.stringify(Question)
@@ -82,7 +82,7 @@ function QuestionsForm(){
         },[submissionResponse])
 
     return(
-        <>
+        <article>
             <div className={`subNotificationTile ${submissionResponse.status&&(`active`)} ${submissionResponse.status==='success'?(`good`):submissionResponse.status==='error'?(`bad`):('')} `}>
                 <span>{submissionResponse.responseText}</span>
             </div>
@@ -116,7 +116,7 @@ function QuestionsForm(){
               </form>
             </> 
           )}
-        </>
+        </article>
     )
 }
 export default QuestionsForm
