@@ -119,32 +119,45 @@
 
 @property --color_pri {
   syntax: "<color>";
-  initial-value: #7A0117;
+  initial-value: #7a0117;
   inherits: false;
 }
 @property --color_accent {
   syntax: "<color>";
-  initial-value: #EE5860;
+  initial-value: #ee5860;
   inherits: false;
 }
 @property --color_base_dark {
   syntax: "<color>";
-  initial-value: #FFF0C1;
+  initial-value: #fff0c1;
   inherits: false;
 }
 @property --color_base {
   syntax: "<color>";
-  initial-value: #FFFEF0;
+  initial-value: #fffef0;
   inherits: false;
 }
 @property --color_font {
   syntax: "<color>";
-  initial-value: #1F0104;
+  initial-value: #1f0104;
   inherits: false;
 }
 
-:root{
+:root {
   background-color: var(--color_base);
+  text-align: center;
+  line-height: 1.5;
+}
+body {
+  margin: 0;
+}
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-size: 18px;
+  text-wrap: balance;
 }
 
 h1 {
@@ -156,8 +169,9 @@ h1 {
   font-family: "Trirong", serif;
   font-weight: 400;
   font-style: italic;
-  font-size: 80px;
-  color:var(--color_pri)
+  font-size: 4.5em;
+  line-height: 1.1em;
+  color: var(--color_pri);
 }
 h3 {
   /*
@@ -169,10 +183,14 @@ h3 {
   font-family: "Trirong", serif;
   font-weight: 400;
   font-style: italic;
-  font-size: 40px;
-  color:var(--color_pri)
+  font-size: 2.25em;
+  color: var(--color_pri);
 }
-p, a{
+p,
+a,
+button,
+textarea,
+input {
   /*
     ?font: Mulish
     ?weight: 400
@@ -181,26 +199,41 @@ p, a{
   */
   font-family: "Mulish", sans-serif;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.075em;
+  margin: 0 0 0.15rem;
+  padding: 0;
 }
-p strong{
-  font-weight:700;
+textarea,
+input {
+  color: var(--color_font);
+  background-color: var(--color_base);
+  border: 1px var(--color_font) solid;
+  line-height: 1.5em;
+  padding: 0.15rem;
 }
-p i{
-  font-style:italic;
+p strong {
+  font-weight: 700;
 }
-p{
-  color:var(--color_font)
+p i {
+  font-style: italic;
 }
-a{color:var(--color_accent);
-  transition:all ease-in-out .25s;
+p {
+  color: var(--color_font);
 }
-a:hover{color:var(--color_pri)}
-ul{
-  color:var(--color_font)
+a {
+  color: var(--color_accent);
+  transition: all ease-in-out 0.25s;
+  text-decoration: none;
+}
+a:hover {
+  color: var(--color_pri);
+}
+ul {
+  color: var(--color_font);
 }
 /*custom styles for testing*/
-header {
+header,
+nav {
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
@@ -211,27 +244,31 @@ header {
 header a.active {
   /* font-size: 3.2em;
   line-height: 1.1; */
-  border-bottom:2px solid var(--color_accent);
+  border-bottom: 2px solid var(--color_accent);
 }
 header a.active:hover {
   /* font-size: 3.2em;
   line-height: 1.1; */
-  border-bottom:2px solid var(--color_pri);
+  border-bottom: 2px solid var(--color_pri);
 }
 
-.btn{
+.btn {
   background-color: var(--color_accent);
   color: var(--color_base);
-  padding: 10px;
-  border-radius: 0.25em;display:block;
-  transition:all ease .25s;
-  box-shadow:  2px 2px 10px -4px var(--color_font),inset 0 0 0 -4px var(--color_font);
+  padding: 0.6em 1em;
+  font-size: 1em;
+  border-radius: 0.25em;
+  transition: all ease 0.25s;
+  border: 0px solid transparent;
+  cursor: pointer;
+  box-shadow: 2px 2px 10px -4px var(--color_font),
+    inset 0 0 0 -4px var(--color_font);
 }
-.btn:hover{  
+.btn:hover {
   color: var(--color_base);
-  box-shadow:  0 0 0 -4px var(--color_font), inset 2px 2px 10px -4px var(--color_font);
+  box-shadow: 0 0 0 -4px var(--color_font),
+    inset 2px 2px 10px -4px var(--color_font);
 }
-
 
 body {
   place-items: normal;
@@ -273,7 +310,8 @@ article {
   margin-bottom: 5rem;
 }
 .projectCard {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: var(--color_base_dark);
+  border-radius: 0.25rem;
   padding: 0.75rem;
   display: flex;
   gap: 0.5rem;
@@ -295,14 +333,13 @@ article {
 }
 
 img {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 
 li p {
   text-align: left;
 }
 
-@media (min-width:768px){
-
+@media (min-width: 768px) {
 }
