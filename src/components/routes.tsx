@@ -7,6 +7,7 @@ import Home from '../pages/home';
 import Contact from '../pages/contact';
 import Donate from '../pages/donate';
 import Legal from '../pages/legal';
+import Projects from '../pages/projects';
 
 
 const SiteRoutes = () => {
@@ -34,6 +35,9 @@ const SiteRoutes = () => {
 
             //* Legal information page route *//
             <Route path={`/legal`} element={<Legal/>}/>
+
+            //* Route for listing projects page route *//
+            <Route path={`/projects`} element={<Projects/>}/>
             
         </Routes>
     )

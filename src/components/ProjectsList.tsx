@@ -38,7 +38,7 @@ function ProjectsList() {
   ];
   return (
     <article id={`ProjectList`}>
-      <h3>Project List</h3>
+      <h1>Project List</h1>
       {projectData.map((project, i) => {
         return (
           <Project

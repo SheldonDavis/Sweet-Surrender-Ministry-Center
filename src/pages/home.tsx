@@ -8,7 +8,6 @@ import TheMission from "../components/TheMission.tsx";
 import VisionOfTheFuture from "../components/VisionOfTheFuture.tsx";
 import CoreValues from "../components/CoreValues.tsx";
 import HowToHelp from "../components/HowToHelp.tsx";
-import ProjectsList from "../components/ProjectsList.tsx";
 
 // interface User{
 //   id:string;
@@ -49,7 +48,6 @@ function Home() {
       <HowToHelp />
       <TheMission />
       <CoreValues />
-      <ProjectsList />
 
       {/*
         isLoading?
