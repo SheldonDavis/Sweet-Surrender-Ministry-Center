@@ -109,7 +109,7 @@ function QuestionsForm(){
                         <FontAwesomeIcon icon={faSpinner} title='sending email' cursor='loading' spin/>
                         </>
                       ):(
-                        <button type='submit'>Send</button>
+                        <button type='submit' className='btn'>Send</button>
                       )
                     }
                   </p>
