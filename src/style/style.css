@@ -117,36 +117,16 @@
   /* font-weight: <weight>; */
 }
 
-@property --color_pri {
-  syntax: "<color>";
-  initial-value: #7a0117;
-  inherits: false;
-}
-@property --color_accent {
-  syntax: "<color>";
-  initial-value: #ee5860;
-  inherits: false;
-}
-@property --color_base_dark {
-  syntax: "<color>";
-  initial-value: #fff0c1;
-  inherits: false;
-}
-@property --color_base {
-  syntax: "<color>";
-  initial-value: #fffef0;
-  inherits: false;
-}
-@property --color_font {
-  syntax: "<color>";
-  initial-value: #1f0104;
-  inherits: false;
-}
 
 :root {
   background-color: var(--color_base);
   text-align: center;
   line-height: 1.5;
+  --color_pri : #7a0117;
+  --color_accent : #ee5860;
+  --color_base_dark : #fff0c1;
+  --color_base :#fffef0;
+  --color_font:#1f0104;
 }
 body {
   margin: 0;
@@ -172,7 +152,7 @@ h1 {
   font-size: 4.5em;
   line-height: 1.1em;
   color: var(--color_pri);
-  margin:1em 0 .33em 0;
+  margin:.33em 0;
 }
 h3 {
   /*
