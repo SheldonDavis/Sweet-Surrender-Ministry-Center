@@ -117,16 +117,33 @@
   /* font-weight: <weight>; */
 }
 
+.notes{
+  color:var(--color_font);
+  font-size:.75em;
+  position:relative;
+  cursor:help;
+}
+.notes::before {
+  content: 'this is a note that is needed to be replaced';
+  display: none;
+  BACKGROUND-COLOR: var(--color_font);
+  color: var(--color_base);
+  padding:0 .25rem;
+  position: absolute;
+  top: -1.75em;
+  left: 0;
+}
+.notes:hover::before {display: inline-block;}
 
 :root {
   background-color: var(--color_base);
   text-align: center;
   line-height: 1.5;
-  --color_pri : #7a0117;
-  --color_accent : #ee5860;
-  --color_base_dark : #fff0c1;
-  --color_base :#fffef0;
-  --color_font:#1f0104;
+  --color_pri: #7a0117;
+  --color_accent: #ee5860;
+  --color_base_dark: #fff0c1;
+  --color_base: #fffef0;
+  --color_font: #1f0104;
 }
 body {
   margin: 0;
@@ -134,7 +151,7 @@ body {
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 0;
   text-align: center;
   font-size: 18px;
   text-wrap: balance;
@@ -152,7 +169,7 @@ h1 {
   font-size: 4.5em;
   line-height: 1.1em;
   color: var(--color_pri);
-  margin:.33em 0;
+  margin: 0.33em 0;
 }
 h3 {
   /*
@@ -166,7 +183,7 @@ h3 {
   font-style: italic;
   font-size: 2.25em;
   color: var(--color_pri);
-  margin:1em 0 .33em 0;
+  margin: 0.33em 0;
 }
 p,
 a,
@@ -183,7 +200,7 @@ span {
   font-family: "Mulish", sans-serif;
   font-weight: 400;
   font-size: 1.075em;
-  margin: 0 0 0.15rem;
+  margin: 0 0 0.33rem;
   padding: 0;
 }
 textarea,
@@ -207,7 +224,7 @@ a {
   color: var(--color_accent);
   transition: all ease-in-out 0.25s;
   text-decoration: none;
-  padding: 0 0 .13em;
+  padding: 0 0 0.13em;
 }
 a:hover {
   color: var(--color_pri);
@@ -223,6 +240,14 @@ nav {
   gap: 1em;
   justify-content: center;
   align-items: center;
+}
+header{flex-direction: column-reverse;}
+nav{flex-direction: row;}
+header nav p{display:block;margin:0 0;}
+header nav a{display:block;margin:0 0;}
+
+.fullLogoLink {
+  padding: 0 0;
 }
 
 header a.active {
@@ -289,9 +314,16 @@ textarea {
 .subNotificationTile.bad span {
   background-color: rgba(255, 0, 61, 60%);
 }
-
+header, footer{
+  padding:0 2rem;
+}
 article {
-  margin-bottom: 5rem;
+  margin-bottom: 3.5rem;
+  padding: 0 2rem;
+}
+article.coloredBG {
+  background-color: var(--color_base_dark);
+  padding: 0.5rem 2rem;
 }
 .projectCard {
   background-color: var(--color_base_dark);
@@ -325,11 +357,13 @@ li p {
   text-align: left;
 }
 
-form p{
-  margin-bottom:.5em;
+form p {
+  margin-bottom: 0.5em;
 }
 
-.imgH_25{max-height:25vh;}
+.imgH_25 {
+  max-height: 25vh;
+}
 
 @media (min-width: 768px) {
 }

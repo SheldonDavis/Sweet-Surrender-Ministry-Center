@@ -11,7 +11,7 @@ function Contact(){
       <>
         <article>
             <h1>Contact</h1>
-            <p>descriptive text for the contact page. tell people about ways to contact SSMC, etc.</p>
+            <p className={`notes`}>descriptive text for the contact page. tell people about ways to contact SSMC, etc.</p>
         </article>
         <Phone/>
         <Mail/>
