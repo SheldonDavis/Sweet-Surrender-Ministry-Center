@@ -1,4 +1,5 @@
 import {NavLink} from 'react-router-dom'
+import FullLogo from '../assets/SSMC_full_logo.svg'
 
 interface Link{
     text:string;
@@ -55,6 +56,9 @@ function Header() {
    
     return(        
         <header>
+            <a href={`/`} className={`fullLogoLink`}>
+                <img src={FullLogo} alt={`Sweet Surrender Ministry Center Logo text with icon`}/>
+            </a>
             <nav>
                 {links.map((page, i)=>{
                     return(
