@@ -124,18 +124,20 @@
   cursor: help;
 }
 .notes::before {
-  content: "this text is a note that needs to be replaced. the text is small to keep it out of the way.";
-  display: none;
+  content: "Notes to Aunt Jill:";
+  display: inline-block;
   background-color: var(--color_accent);
-  color: var(--color_font);
+  color: var(--color_base);
   padding: 0 0.25rem;
-  position: absolute;
+  margin-right:2px;
+}
+.notes:hover::before {
+  /* position: absolute;
   max-width: 150px;
   bottom: 110%;
   right: 0;
-}
-.notes:hover::before {
-  display: inline-block;
+  content: "this text is a note that needs to be replaced. the text is small to keep it out of the way.";
+  display: inline-block; */
 }
 
 :root {
