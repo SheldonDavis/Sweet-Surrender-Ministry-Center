@@ -154,7 +154,6 @@ body {
   margin: 0;
 }
 #root {
-  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem 0;
   text-align: center;
@@ -302,6 +301,7 @@ footer p {
   box-shadow: 0 0 0 -4px var(--color_font),
     inset 2px 2px 10px -4px var(--color_font);
 }
+header a.active.btn:hover{border-bottom-color:transparent;}
 
 body {
   place-items: normal;
