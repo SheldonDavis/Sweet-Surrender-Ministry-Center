@@ -1,6 +1,6 @@
 function CoreValues(){
     return(
-        <article id={`CoreValues`}>
+        <article id={`CoreValues`} className={`coloredBG dark`}>
             <h3>Core Values</h3>
             <p><strong>See them.</strong> <i>Hebrews 2:10 (NLT)</i> - God, for whom and through whom everything was made...</p>
             <p><strong>Serve them.</strong> <i>Matthew 22:37-39 (NLT)</i> - Love the LORD your God with all your heart, all your soul, and all your mind... Love your neighbor as yourself.</p>

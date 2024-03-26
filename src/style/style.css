@@ -117,23 +117,26 @@
   /* font-weight: <weight>; */
 }
 
-.notes{
-  color:var(--color_font);
-  font-size:.75em;
-  position:relative;
-  cursor:help;
+.notes {
+  color: var(--color_font);
+  font-size: 0.75em;
+  position: relative;
+  cursor: help;
 }
 .notes::before {
-  content: 'this is a note that is needed to be replaced';
+  content: "this text is a note that needs to be replaced. the text is small to keep it out of the way.";
   display: none;
-  BACKGROUND-COLOR: var(--color_font);
-  color: var(--color_base);
-  padding:0 .25rem;
+  background-color: var(--color_accent);
+  color: var(--color_font);
+  padding: 0 0.25rem;
   position: absolute;
-  top: -1.75em;
-  left: 0;
+  max-width: 150px;
+  bottom: 110%;
+  right: 0;
 }
-.notes:hover::before {display: inline-block;}
+.notes:hover::before {
+  display: inline-block;
+}
 
 :root {
   background-color: var(--color_base);
@@ -241,10 +244,20 @@ nav {
   justify-content: center;
   align-items: center;
 }
-header{flex-direction: column-reverse;}
-nav{flex-direction: row;}
-header nav p{display:block;margin:0 0;}
-header nav a{display:block;margin:0 0;}
+header {
+  flex-direction: column-reverse;
+}
+nav {
+  flex-direction: row;
+}
+header nav p {
+  display: block;
+  margin: 0 0;
+}
+header nav a {
+  display: block;
+  margin: 0 0;
+}
 
 .fullLogoLink {
   padding: 0 0;
@@ -259,6 +272,15 @@ header a.active:hover {
   /* font-size: 3.2em;
   line-height: 1.1; */
   border-bottom: 2px solid var(--color_pri);
+}
+
+header,
+footer {
+  padding: 0 2rem;
+}
+
+footer p {
+  font-size: 0.9em;
 }
 
 .btn {
@@ -314,17 +336,27 @@ textarea {
 .subNotificationTile.bad span {
   background-color: rgba(255, 0, 61, 60%);
 }
-header, footer{
-  padding:0 2rem;
-}
 article {
   margin-bottom: 3.5rem;
   padding: 0 2rem;
 }
-article.coloredBG {
+article.coloredBG.light {
   background-color: var(--color_base_dark);
-  padding: 0.5rem 2rem;
+  padding: 0.66rem 2rem;
 }
+article.coloredBG.dark {
+  background-color: var(--color_pri);
+  padding: 0.66rem 2rem;
+}
+
+article.coloredBG.dark p{ 
+  color:var(--color_base)
+} 
+article.coloredBG.dark h1, 
+article.coloredBG.dark h3{ 
+  color:var(--color_base)
+}
+
 .projectCard {
   background-color: var(--color_base_dark);
   border-radius: 0.25rem;
@@ -334,6 +366,9 @@ article.coloredBG {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+
+  box-shadow: 4px 4px 10px -6px var(--color_font),
+    -4px -4px 10px -6px var(--color_base_dark);
 }
 
 .projectCard .projectText {
