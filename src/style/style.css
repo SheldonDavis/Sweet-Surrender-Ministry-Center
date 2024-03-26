@@ -129,7 +129,7 @@
   background-color: var(--color_accent);
   color: var(--color_base);
   padding: 0 0.25rem;
-  margin-right:2px;
+  margin-right: 2px;
 }
 .notes:hover::before {
   /* position: absolute;
@@ -301,7 +301,9 @@ footer p {
   box-shadow: 0 0 0 -4px var(--color_font),
     inset 2px 2px 10px -4px var(--color_font);
 }
-header a.active.btn:hover{border-bottom-color:transparent;}
+header a.active.btn:hover {
+  border-bottom-color: transparent;
+}
 
 body {
   place-items: normal;
@@ -351,12 +353,12 @@ article.coloredBG.dark {
   padding: 0.66rem 2rem;
 }
 
-article.coloredBG.dark p{ 
-  color:var(--color_base)
-} 
-article.coloredBG.dark h1, 
-article.coloredBG.dark h3{ 
-  color:var(--color_base)
+article.coloredBG.dark p {
+  color: var(--color_base);
+}
+article.coloredBG.dark h1,
+article.coloredBG.dark h3 {
+  color: var(--color_base);
 }
 
 .projectCard {
