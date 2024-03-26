@@ -39,6 +39,8 @@ async function sendNotification(target:HTMLFormElement){
     const templateParams:Record<string, string> = {
       emailSubject:"testing email submission through website",
       emailBody:theBody,
+      emailSender:ContactEmail,
+      emailQuestion:Question,
     }
 
     await emailjs.send(ENV.VITE_EMAILJS_SERVICE_ID, ENV.VITE_EMAILJS_TEMPLATE_ID, templateParams, ENV.VITE_EMAILJS_PUBLIC_API_KEY)
