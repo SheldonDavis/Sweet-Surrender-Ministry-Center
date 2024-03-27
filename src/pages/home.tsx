@@ -4,7 +4,7 @@
 
 //importing components
 import WhoWeAre from "../components/WhoWeAre";
-import TheMission from "../components/TheMission.tsx";
+import Mission from "../components/Mission.tsx";
 import VisionOfTheFuture from "../components/VisionOfTheFuture.tsx";
 import CoreValues from "../components/CoreValues.tsx";
 import HowToHelp from "../components/HowToHelp.tsx";
@@ -43,11 +43,11 @@ function Home() {
   return (
     <>
       <h1>Sweet Surrender Ministry Center</h1>
-      <WhoWeAre />
-      <VisionOfTheFuture />
-      <HowToHelp />
-      <TheMission />
-      <CoreValues />
+      <WhoWeAre classes={``}/>
+      <VisionOfTheFuture classes={`coloredBG light`}/>
+      <Mission classes={``}/>
+      <CoreValues classes={``}/>
+      <HowToHelp classes={`coloredBG dark`}/>
 
       {/*
         isLoading?

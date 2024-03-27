@@ -18,12 +18,11 @@
     
 //     return {'id':querySnapshot.docs[0].id, ...theOBJ}
 // }
-// interface Properties{
-//     setIsLoading:Dispatch<SetStateAction<boolean>>;
-//     isLoading?:boolean;
-// }
+interface Properties{
+    classes?:string;
+}
 
-function WhoWeAre(){//props: Properties
+function WhoWeAre(props: Properties){//props: Properties
     // const [data, setData] = useState<WhoWeArePost>({})
     // const {setIsLoading} = props
 
@@ -39,7 +38,7 @@ function WhoWeAre(){//props: Properties
     // useEffect(()=>{d
     //     setIsLoading(false);
     // },[data, setIsLoading]);
-
+    const {classes}=props
     return(<>
         {/* {data?.id ? (
             <article id='WhoWeAre'>
@@ -57,7 +56,7 @@ function WhoWeAre(){//props: Properties
             </article>
         )} */}
         
-            <article id='WhoWeAre'>
+            <article id='WhoWeAre' className={classes}>
                 <h3>Who Is SSMC</h3>
                 <p>Sweet Surrender Ministry Center (SSMC) is a 501(c)(3) nonprofit newly organized in October 2023 that seeks to provide charitable services to individuals and families of Bedford County, PA. With an ambitious and eager beginning, this nonprofit is getting started with four foundational projects: Birthday Blessing Box, H.O.P.E. Box, Manna Monday, and Second Chance program. </p>
             </article>
