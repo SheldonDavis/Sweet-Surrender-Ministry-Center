@@ -94,7 +94,7 @@ function QuestionsForm(){
               </>
           ):(
             <>
-              <h3>Have a question for Sweet Surrender?</h3>
+              <h3>Send Your Questions Here</h3>
 
           <p className={`notes`}>need to know if there are any additional information need to be gathered during this form.</p>
             

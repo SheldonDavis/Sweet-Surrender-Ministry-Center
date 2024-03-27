@@ -2,6 +2,7 @@
 import QuestionsForm from "../components/QuestionsForm";
 import Phone from "../components/PhoneInfo";
 import Mail from "../components/MailingInfo";
+import Email from "../components/EmailInfo";
 
 
 function Contact(){
@@ -15,6 +16,7 @@ function Contact(){
         </article>
         <Phone/>
         <Mail/>
+        <Email/>
         <QuestionsForm/>
       </>
   )

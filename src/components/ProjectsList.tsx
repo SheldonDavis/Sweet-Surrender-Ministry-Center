@@ -32,13 +32,13 @@ function ProjectsList() {
       title: `Second Chance`,
       image: SecondChance,
       description: [
-        `A mentorship style program for individuals who have struggled on their own to overcome barriers and who present a true desire to change life patterns toward becoming productive members of their community. Mentors meet with the individual first to establish a goals plan followed by a yearlong schedule of progressive accountability meetings. Upon successful completion, individuals will have learned certain life skills and/or trades to have reached or be well established on their way to attain their original goals plan. `,
+        `A mentorship style program for individuals who have struggled on their own to overcome barriers and who present a true desire to change life patterns toward becoming productive members of their community. Mentors meet with the individual first to establish a goals plan followed by a yearlong schedule of progressive accountability meetings with Biblical application. Upon successful completion, individuals will have learned certain life skills and/or trades to have reached or be well established on their way to attain their original goals plan. `,
       ],
     },
   ];
   return (
     <article id={`ProjectList`}>
-      <h1>Project List</h1>
+      <h1>Projects</h1>
       {projectData.map((project, i) => {
         return (
           <Project
