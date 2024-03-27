@@ -360,6 +360,9 @@ article.coloredBG.dark h1,
 article.coloredBG.dark h3 {
   color: var(--color_base);
 }
+article.coloredBG.dark ul {
+  color: var(--color_base);
+}
 
 .projectCard {
   background-color: var(--color_base_dark);
@@ -382,8 +385,14 @@ article.coloredBG.dark h3 {
 .projectCard.rightToLeft {
   direction: rtl;
 }
+.projectCard.rightToLeft p{
+  direction: ltr;
+}
 
 .projectCard.leftToRight {
+  direction: ltr;
+}
+.projectCard.leftToRight p{
   direction: ltr;
 }
 
