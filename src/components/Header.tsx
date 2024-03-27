@@ -10,45 +10,45 @@ interface Link{
 
 const links:Array<Link> = [
     {
-        text:'home',
+        text:'Home',
         url:'/',
         optClasses:'',
         active:true,
     },
     {
-        text:'contact',
+        text:'Contact',
         url:'/contact',
         optClasses:'',
         active:true,
     },
     {
-        text:'about',
+        text:'About',
         url:'/about',
         optClasses:'',
         active:false,
     },
     {
-        text:'projects',
+        text:'Projects',
         url:'/projects',
         optClasses:'',
         active:true,
     },
     {
-        text:'donate',
+        text:'Donate',
         url:'/donate',
         optClasses:'btn',
         active:true,
     },
     {
-        text:'legal',
+        text:'Legal',
         url:'/legal',
         optClasses:'',
         active:false,
     },
     {
-        text:'other',
+        text:'Other',
         url:'/other',
-        optClasses:'',
+        optClasses:'This_Is_Placeholder_Use_As_Baseline_For_More_Links',
         active:false,
     },
 ]
