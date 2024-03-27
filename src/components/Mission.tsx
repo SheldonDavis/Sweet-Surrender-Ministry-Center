@@ -1,7 +1,12 @@
-function TheMission() {
+interface Properties{
+  classes?:string;
+}
+
+function Mission(props:Properties) {
+  const {classes}=props
   return (
-    <article id={`TheMission`}>
-      <h3>The Mission</h3>
+    <article id={`TheMission`} className={classes}>
+      <h3>Mission</h3>
       <p>
         Loving, Training, Equipping and Empowering the Least, the Last, and the
         Lost with the Love of God.
@@ -14,4 +19,4 @@ function TheMission() {
     </article>
   );
 }
-export default TheMission;
+export default Mission;
