@@ -194,7 +194,8 @@ a,
 button,
 textarea,
 input,
-span {
+span,
+li {
   /*
     ?font: Mulish
     ?weight: 400

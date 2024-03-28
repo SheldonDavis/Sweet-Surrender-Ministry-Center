@@ -75,31 +75,39 @@ function Legal() {
           understand the way in which websites garner, make use of and share the
           information collected.
         </p>
-        <p>
-          Specifically, this Policy will inform you of the following
-          <ol>
-            <li>
+        <p>Specifically, this Policy will inform you of the following</p>
+        <ol>
+          <li>
+            <p>
               What personally identifiable information is collected from you
               through our website;
-            </li>
-            <li>
+            </p>
+          </li>
+          <li>
+            <p>
               Why we collect personally identifiable information and the legal
               basis for such collection;
-            </li>
-            <li>
+            </p>
+          </li>
+          <li>
+            <p>
               How we use the collected information and with whom it may be
               shared;
-            </li>
-            <li>
+            </p>
+          </li>
+          <li>
+            <p>
               What choices are available to you regarding the use of your data;
               and
-            </li>
-            <li>
+            </p>
+          </li>
+          <li>
+            <p>
               The security procedures in place to protect the misuse of your
               information.
-            </li>
-          </ol>
-        </p>
+            </p>
+          </li>
+        </ol>
       </article>
 
       <article id={`InformationWeCollect`}>
@@ -121,31 +129,39 @@ function Legal() {
       </article>
       <article id={`WhyWeCollect`}>
         <h3>Why We Collect Information and For How Long</h3>
-        <p>
-          We are collecting your data for several reasons:
-          <ul>
-            <li>
+        <p>We are collecting your data for several reasons:</p>
+        <ul>
+          <li>
+            <p>
               To better understand your needs and provide you with the services
               you have requested;
-            </li>
-            <li>
+            </p>
+          </li>
+          <li>
+            <p>
               To fulfill our legitimate interest in improving our services and
               products;
-            </li>
-            <li>
+            </p>
+          </li>
+          <li>
+            <p>
               To send you promotional emails containing information we think you
               may like when we have your consent to do so;
-            </li>
-            <li>
+            </p>
+          </li>
+          <li>
+            <p>
               To contact you to fill out surveys or participate in other types
               of market research, when we have your consent to do so;
-            </li>
-            <li>
+            </p>
+          </li>
+          <li>
+            <p>
               To customize our website according to your online behavior and
               personal preferences.
-            </li>
-          </ul>
-        </p>
+            </p>
+          </li>
+        </ul>
         <p>
           The data we collect from you will be stored for no longer than
           necessary. The length of time we retain said information will be
@@ -189,33 +205,47 @@ function Legal() {
         <p>
           Sweet Surrender Ministry Center may not use or disclose the
           information provided by you except under the following circumstances:
-          <ul>
-            <li>
+        </p>
+        <ul>
+          <li>
+            <p>
               as necessary to provide services or products you have ordered;
-            </li>
-            <li>
+            </p>
+          </li>
+          <li>
+            <p>
               in other ways described in this Policy or to which you have
               otherwise consented;
-            </li>
-            <li>
+            </p>
+          </li>
+          <li>
+            <p>
               in the aggregate with other information in such a way so that your
               identity cannot reasonably be determined;
-            </li>
-            <li>
+            </p>
+          </li>
+          <li>
+            <p>
               as required by law, or in response to a subpoena or search
               warrant;
-            </li>
-            <li>
+            </p>
+          </li>
+          <li>
+            <p>
               to outside auditors who have agreed to keep the information
               confidential;
-            </li>
-            <li> as necessary to enforce the Terms of Service; </li>
-            <li>
+            </p>
+          </li>
+          <li>
+            <p> as necessary to enforce the Terms of Service; </p>
+          </li>
+          <li>
+            <p>
               as necessary to maintain, safeguard and preserve all the rights
               and property of Sweet Surrender Ministry Center
-            </li>
-          </ul>
-        </p>
+            </p>
+          </li>
+        </ul>
       </article>
 
       <article id={`NonMarketingPurposes`}>
