@@ -131,14 +131,14 @@
   padding: 0 0.25rem;
   margin-right: 2px;
 }
-.notes:hover::before {
-  /* position: absolute;
+/*.notes:hover::before {
+   position: absolute;
   max-width: 150px;
   bottom: 110%;
   right: 0;
   content: "this text is a note that needs to be replaced. the text is small to keep it out of the way.";
-  display: inline-block; */
-}
+  display: inline-block; 
+}*/
 
 :root {
   background-color: var(--color_base);
@@ -424,12 +424,12 @@ form p {
 dialog[open]{
   z-index:9;
   background-color: var(--color_base_dark);
-  border-color:var(--color_pri);
+  border:2px solid var(--color_pri);
   position: fixed;
   top: 8vh;
   max-width: 1280px;
   width:85%;
-  max-height:80vh;
+  max-height:75vh;
   overflow-y:auto;
   border-radius: 0.25rem;
   box-shadow: 4px 4px 10px -6px var(--color_font),
