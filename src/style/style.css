@@ -293,6 +293,7 @@ footer p {
   transition: all ease 0.25s;
   border: 0px solid transparent;
   cursor: pointer;
+  display:inline-block;
   box-shadow: 2px 2px 10px -4px var(--color_font),
     inset 0 0 0 -4px var(--color_font);
 }
@@ -412,6 +413,21 @@ form p {
 .imgH_25 {
   max-height: 25vh;
 }
+
+dialog[open]{
+  z-index:9;
+  background-color: var(--color_base_dark);
+  border-color:var(--color_pri);
+  position: fixed;
+  top: 10%;
+  max-width: 1280px;
+  width:85%;
+  border-radius: 0.25rem;
+  box-shadow: 4px 4px 10px -6px var(--color_font),
+    -4px -4px 10px -6px var(--color_base_dark);
+}
+
+
 
 @media (min-width: 768px) {
 }
