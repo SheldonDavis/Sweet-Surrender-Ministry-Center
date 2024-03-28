@@ -349,10 +349,16 @@ section {
 section.coloredBG.light {
   background-color: var(--color_base_dark);
   padding: 0.66rem 2rem;
+  
+  box-shadow: 2px 2px 10px -2px var(--color_base_dark),
+  -2px -2px 10px -2px var(--color_base_dark);
 }
 section.coloredBG.dark {
   background-color: var(--color_pri);
   padding: 0.66rem 2rem;
+  
+  box-shadow: 2px 2px 10px -2px var(--color_pri),
+  -2px -2px 10px -2px var(--color_pri);
 }
 
 section.coloredBG.dark p {
