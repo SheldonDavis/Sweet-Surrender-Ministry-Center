@@ -21,7 +21,9 @@ function Donate() {
       </section>
       <section className='coloredBG light'>
         <h3>Online Donation Form</h3>
+
         <dialog id={`WhyZeffyDialog`} open={isDialogOpen}>
+          <h3>Why Zeffy?</h3>
           <p>
             SSMC has chosen the Zeffy online giving platform for all online
             donation transactions as well as managing all donor giving records
@@ -47,6 +49,7 @@ function Donate() {
             Why Zeffy?
           </a>
         </p>
+
         <form>
           <p className={`notes`}>placeholder form</p>
           <p>
