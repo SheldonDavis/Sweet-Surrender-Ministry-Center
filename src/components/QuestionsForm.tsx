@@ -116,7 +116,7 @@ function QuestionsForm() {
         </>
       ) : (
         <>
-          <h3>Send Your Questions Here</h3>
+          <h3>Email Your Questions Here</h3>
 
           <p className={`notes`}>
             need to know if there are any additional information need to be
