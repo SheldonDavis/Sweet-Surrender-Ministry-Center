@@ -7,13 +7,13 @@ import Mail from '../components/MailingInfo';
 function Contact() {
   return (
     <>
-      <article>
+      <section>
         <h1>Contact</h1>
         {/* <p className={`notes`}>
           descriptive text for the contact page. tell people about ways to
           contact SSMC, etc.
         </p> */}
-      </article>
+      </section>
       <Phone />
       <Mail />
       {/* <Email/> */}

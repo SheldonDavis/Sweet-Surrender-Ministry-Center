@@ -1,9 +1,9 @@
 //components
-import Project from "./Project";
-import birthdayBlessingBox from '../assets/BirthdayBlessingBox.jpg'
-import HopeBox from '../assets/HOPE_Box.jpg'
-import MannaMonday from '../assets/MannaMonday.jpg'
-import SecondChance from '../assets/SecondChance.jpg'
+import Project from './Project';
+import birthdayBlessingBox from '../assets/BirthdayBlessingBox.jpg';
+import HopeBox from '../assets/HOPE_Box.jpg';
+import MannaMonday from '../assets/MannaMonday.jpg';
+import SecondChance from '../assets/SecondChance.jpg';
 
 function ProjectsList() {
   const projectData = [
@@ -37,7 +37,7 @@ function ProjectsList() {
     },
   ];
   return (
-    <article id={`ProjectList`}>
+    <section id={`ProjectList`}>
       <h1>Projects</h1>
       {projectData.map((project, i) => {
         return (
@@ -51,7 +51,7 @@ function ProjectsList() {
         );
       })}
       {/* <Project title={`testing`} image={`file path`} description={[`this`,`is`,`it`]} orientation={true} /> */}
-    </article>
+    </section>
   );
 }
 export default ProjectsList;

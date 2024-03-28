@@ -96,7 +96,7 @@ function QuestionsForm() {
   }, [submissionResponse]);
 
   return (
-    <article>
+    <section>
       <div
         className={`subNotificationTile ${
           submissionResponse.status && `active`
@@ -172,7 +172,7 @@ function QuestionsForm() {
         </a>
         .
       </p>
-    </article>
+    </section>
   );
 }
 export default QuestionsForm;

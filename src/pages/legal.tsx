@@ -34,7 +34,7 @@ function Legal() {
         </a>
       </p> */}
 
-      <article id={`Notice`}>
+      <section id={`Notice`}>
         <h3>ONLINE PRIVACY POLICY AGREEMENT</h3>
         <p>April 15, 2024 Sweet Surrender</p>
         <p>
@@ -108,9 +108,9 @@ function Legal() {
             </p>
           </li>
         </ol>
-      </article>
+      </section>
 
-      <article id={`InformationWeCollect`}>
+      <section id={`InformationWeCollect`}>
         <h3>Information We Collect</h3>
         <p>
           It is always up to you whether to disclose personally identifiable
@@ -126,8 +126,9 @@ function Legal() {
           operating system, which will assist us in providing and maintaining
           superior quality service.
         </p>
-      </article>
-      <article id={`WhyWeCollect`}>
+      </section>
+
+      <section id={`WhyWeCollect`}>
         <h3>Why We Collect Information and For How Long</h3>
         <p>We are collecting your data for several reasons:</p>
         <ul>
@@ -175,9 +176,9 @@ function Legal() {
           legitimate interest in keeping such information as stated in this
           Policy
         </p>
-      </article>
+      </section>
 
-      <article id={`UseOfInformation`}>
+      <section id={`UseOfInformation`}>
         <h3>Use of Information Collected</h3>
         <p>
           Sweet Surrender Ministry Center does not now, nor will it in the
@@ -198,9 +199,9 @@ function Legal() {
           to your opinion of current or potential future services that may be
           offered.
         </p>
-      </article>
+      </section>
 
-      <article id={`InformationDisclosure`}>
+      <section id={`InformationDisclosure`}>
         <h3>Disclosure of Information</h3>
         <p>
           Sweet Surrender Ministry Center may not use or disclose the
@@ -246,9 +247,9 @@ function Legal() {
             </p>
           </li>
         </ul>
-      </article>
+      </section>
 
-      <article id={`NonMarketingPurposes`}>
+      <section id={`NonMarketingPurposes`}>
         <h3>Non-Marketing Purposes</h3>
         <p>
           Sweet Surrender Ministry Center greatly respects your privacy. We do
@@ -258,10 +259,10 @@ function Legal() {
           services). In certain circumstances, we may use our website,
           newspapers, or other public means to post a notice.
         </p>
-      </article>
+      </section>
 
-      <article id={`ChildrenUnder13`}>
-        <h3>Children under the age of 13</h3>
+      <section id={`ChildrenUnder13`}>
+        <h3>Children Under the Age of 13</h3>
         <p>
           Sweet Surrender Ministry Center's website is not directed to, and does
           not knowingly collect personal identifiable information from, children
@@ -274,9 +275,9 @@ function Legal() {
           thirteen (13) must seek and obtain parent or guardian permission to
           use this website.
         </p>
-      </article>
+      </section>
 
-      <article id={`UnSubscribeOrOptOut`}>
+      <section id={`UnSubscribeOrOptOut`}>
         <h3>Unsubscribe or Opt-Out</h3>
         <p>
           All users and visitors to our website have the option to discontinue
@@ -288,9 +289,9 @@ function Legal() {
           Ministry Center will continue to adhere to this Policy with respect to
           any personal information previously collected.
         </p>
-      </article>
+      </section>
 
-      <article id={`LinksToOtherWebsites`}>
+      <section id={`LinksToOtherWebsites`}>
         <h3>Links to Other Websites</h3>
         <p>
           Our website does contain links to affiliate and other websites. Sweet
@@ -302,9 +303,9 @@ function Legal() {
           Privacy Policy Agreement applies only and solely to the information
           collected by our website.
         </p>
-      </article>
+      </section>
 
-      <article id={`NoticeToEuropeanUnionUsers`}>
+      <section id={`NoticeToEuropeanUnionUsers`}>
         <h3>Notice to European Union Users</h3>
         <p>
           Sweet Surrender Ministry Center's operations are located primarily in
@@ -318,9 +319,9 @@ function Legal() {
           Shield.) By providing personal information to us, you are consenting
           to its storage and use as described in this Policy.
         </p>
-      </article>
+      </section>
 
-      <article id={`Security`}>
+      <section id={`Security`}>
         <h3>Security</h3>
         <p>
           Sweet Surrender Ministry Center takes precautions to protect your
@@ -341,9 +342,9 @@ function Legal() {
           done to prevent any loss, misuse, unauthorized access, disclosure or
           modification of the user's personal information under our control.
         </p>
-      </article>
+      </section>
 
-      <article id={`AcceptanceOfTerms`}>
+      <section id={`AcceptanceOfTerms`}>
         <h3>Acceptance of Terms</h3>
         <p>
           By using this website, you are hereby accepting the terms and
@@ -354,7 +355,7 @@ function Legal() {
           terms and conditions shall mean that you agree and acceptance of such
           changes.
         </p>
-      </article>
+      </section>
     </>
   );
 }

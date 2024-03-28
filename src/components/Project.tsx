@@ -8,7 +8,7 @@ interface Properties {
 function Project(props: Properties) {
   const { title, description, image, orientation } = props;
   return (
-    <article
+    <section
       className={`projectCard ${orientation ? `rightToLeft` : `leftToRight`}`}
     >
       <p className={`projectImage`}>
@@ -20,7 +20,7 @@ function Project(props: Properties) {
           return <p key={i}>{p}</p>;
         })}
       </div>
-    </article>
+    </section>
   );
 }
 export default Project;

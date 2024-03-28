@@ -10,7 +10,7 @@ function Donate() {
     <>
       <h1>Donate</h1>
 
-      <article>
+      <section>
         <p>
           It is with sincere gratitude that your donation is received into Sweet
           Surrender Ministry Center as a vessel through which the hands and feet
@@ -18,8 +18,8 @@ function Donate() {
           ways that reveal life transforming hope found in relationship with
           Jesus Christ. Thank You, we couldn't do it without YOU!
         </p>
-      </article>
-      <article className='coloredBG light'>
+      </section>
+      <section className='coloredBG light'>
         <h3>Online Donation Form</h3>
         <dialog id={`WhyZeffyDialog`} open={isDialogOpen}>
           <p>
@@ -66,8 +66,8 @@ function Donate() {
             <label> Checkbox</label>
           </p>
         </form>
-      </article>
-      <article>
+      </section>
+      <section>
         <h3>Other Ways to Contribute</h3>
         <p>
           <strong>
@@ -94,7 +94,7 @@ function Donate() {
           examples and are not meant to restrict your donation creativity within
           the scope of vision for each project.
         </p>
-      </article>
+      </section>
     </>
   );
 }

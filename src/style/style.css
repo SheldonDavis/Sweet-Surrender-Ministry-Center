@@ -205,7 +205,7 @@ li {
   font-family: "Mulish", sans-serif;
   font-weight: 400;
   font-size: 1.075em;
-  margin: 0 0 0.33rem;
+  margin: 0 0 0.75rem;
   padding: 0;
 }
 textarea,
@@ -342,27 +342,27 @@ textarea {
 .subNotificationTile.bad span {
   background-color: rgba(255, 0, 61, 60%);
 }
-article {
+section {
   margin-bottom: 3.5rem;
   padding: 0 2rem;
 }
-article.coloredBG.light {
+section.coloredBG.light {
   background-color: var(--color_base_dark);
   padding: 0.66rem 2rem;
 }
-article.coloredBG.dark {
+section.coloredBG.dark {
   background-color: var(--color_pri);
   padding: 0.66rem 2rem;
 }
 
-article.coloredBG.dark p {
+section.coloredBG.dark p {
   color: var(--color_base);
 }
-article.coloredBG.dark h1,
-article.coloredBG.dark h3 {
+section.coloredBG.dark h1,
+section.coloredBG.dark h3 {
   color: var(--color_base);
 }
-article.coloredBG.dark ul {
+section.coloredBG.dark ul {
   color: var(--color_base);
 }
 
