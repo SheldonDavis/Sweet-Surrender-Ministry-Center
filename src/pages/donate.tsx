@@ -1,11 +1,6 @@
-import { useState } from 'react';
+import DialogPopup from '../components/DialogPopup';
 
 function Donate() {
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
-  function handle_dialogToggle() {
-    setIsDialogOpen(!isDialogOpen);
-  }
-
   return (
     <>
       <h1>Donate</h1>
@@ -22,33 +17,13 @@ function Donate() {
       <section className='coloredBG light'>
         <h3>Online Donation Form</h3>
 
-        <dialog id={`WhyZeffyDialog`} open={isDialogOpen}>
-          <h3>Why Zeffy?</h3>
-          <p>
-            SSMC has chosen the Zeffy online giving platform for all online
-            donation transactions as well as managing all donor giving records
-            made to the ministry center. Zeffy ensures that every dollar you
-            donate the Sweet Surrender Ministry Center goes to SSMC by not
-            withholding any transaction fees from your generous charitable
-            donation. Upon checkout without your online donation, you will be
-            given the opportunity to increase your donation by allocating a gift
-            to Zeffy for their services to many nonprofit organizations like
-            SSMC. Whether or not you choose this option in no way affects your
-            donation designation to Sweet Surrender Ministry Center. Your online
-            donation will conclude with a tax deductible charitable donation
-            receipt emailed directly to the email address you provide.
-          </p>
-          <p>
-            <a className={`btn`} onClick={handle_dialogToggle}>
-              Close
-            </a>
-          </p>
-        </dialog>
-        <p>
-          <a className={`btn`} onClick={handle_dialogToggle}>
-            Why Zeffy?
-          </a>
-        </p>
+        <DialogPopup
+          openBtnTxt={`Why Zeffy?`}
+          ModalTitle={`Why Zeffy?`}
+          BodyText={[
+            `SSMC has chosen the Zeffy online giving platform for all online donation transactions as well as managing all donor giving records made to the ministry center. Zeffy ensures that every dollar you donate the Sweet Surrender Ministry Center goes to SSMC by not withholding any transaction fees from your generous charitable donation. Upon checkout without your online donation, you will be given the opportunity to increase your donation by allocating a gift to Zeffy for their services to many nonprofit organizations like SSMC. Whether or not you choose this option in no way affects your donation designation to Sweet Surrender Ministry Center. Your online donation will conclude with a tax deductible charitable donation receipt emailed directly to the email address you provide.`,
+          ]}
+        />
 
         <form>
           <p className={`notes`}>placeholder form</p>
