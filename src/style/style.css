@@ -117,6 +117,7 @@
   /* font-weight: <weight>; */
 }
 
+/*Notes class - will go away for Live*/
 .notes {
   color: var(--color_font);
   font-size: 0.75em;
@@ -139,7 +140,7 @@
   content: "this text is a note that needs to be replaced. the text is small to keep it out of the way.";
   display: inline-block; 
 }*/
-
+/*baseline formatting for a smooth trickle down of styles*/
 :root {
   background-color: var(--color_base);
   text-align: center;
@@ -150,9 +151,9 @@
   --color_base: #fffef0;
   --color_font: #1f0104;
 }
-body {
-  margin: 0;
-}
+
+body {margin: 0;}
+
 #root {
   margin: 0 auto;
   padding: 2rem 0;
@@ -161,6 +162,7 @@ body {
   text-wrap: balance;
 }
 
+/*starting point for text formatting and form elements*/
 h1 {
   /*
     ?font: TriRong
@@ -175,6 +177,7 @@ h1 {
   color: var(--color_pri);
   margin: 0.33em 0;
 }
+
 h3 {
   /*
     ?font: Mulish
@@ -189,13 +192,8 @@ h3 {
   color: var(--color_pri);
   margin: 0.33em 0;
 }
-p,
-a,
-button,
-textarea,
-input,
-span,
-li {
+
+p, a, button, textarea, input, span, li {
   /*
     ?font: Mulish
     ?weight: 400
@@ -208,23 +206,27 @@ li {
   margin: 0 0 0.75rem;
   padding: 0;
 }
-textarea,
-input {
+
+textarea, input {
   color: var(--color_font);
   background-color: var(--color_base);
   border: 1px var(--color_font) solid;
   line-height: 1.5em;
   padding: 0.15rem;
 }
+
 p strong {
   font-weight: 700;
 }
+
 p i {
   font-style: italic;
 }
+
 p {
   color: var(--color_font);
 }
+
 a {
   color: var(--color_accent);
   transition: all ease-in-out 0.25s;
@@ -234,28 +236,46 @@ a {
 a:hover {
   color: var(--color_pri);
 }
+
 ul {
   color: var(--color_font);
 }
-/*custom styles for testing*/
-header,
-nav {
+
+textarea {
+  width: 100%;
+  resize: none;
+}
+
+li p {
+  text-align: left;
+}
+
+form p {
+  margin-bottom: 0.5em;
+}
+
+/*header,nav,logo, footer*/
+header, nav {
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
   justify-content: center;
   align-items: center;
 }
+
 header {
   flex-direction: column-reverse;
 }
+
 nav {
   flex-direction: row;
 }
+
 header nav p {
   display: block;
   margin: 0 0;
 }
+
 header nav a {
   display: block;
   margin: 0 0;
@@ -270,14 +290,18 @@ header a.active {
   line-height: 1.1; */
   border-bottom: 2px solid var(--color_accent);
 }
+
 header a.active:hover {
   /* font-size: 3.2em;
   line-height: 1.1; */
   border-bottom: 2px solid var(--color_pri);
 }
 
-header,
-footer {
+header a.active.btn:hover {
+  border-bottom-color: transparent;
+}
+
+header, footer {
   padding: 0 2rem;
 }
 
@@ -285,6 +309,7 @@ footer p {
   font-size: 0.9em;
 }
 
+/*interactable button styles*/
 .btn {
   background-color: var(--color_accent);
   color: var(--color_base);
@@ -298,22 +323,14 @@ footer p {
   box-shadow: 2px 2px 10px -4px var(--color_font),
     inset 0 0 0 -4px var(--color_font);
 }
+
 .btn:hover {
   color: var(--color_base);
   box-shadow: 0 0 0 -4px var(--color_font),
     inset 2px 2px 10px -4px var(--color_font);
 }
-header a.active.btn:hover {
-  border-bottom-color: transparent;
-}
 
-body {
-  place-items: normal;
-}
-textarea {
-  width: 100%;
-  resize: none;
-}
+/*form notification popup*/
 
 .subNotificationTile {
   position: fixed;
@@ -342,10 +359,18 @@ textarea {
 .subNotificationTile.bad span {
   background-color: rgba(255, 0, 61, 60%);
 }
+
+
+/*maincontent and body styles*/
+body {
+  place-items: normal;
+}
+
 section {
   margin-bottom: 3.5rem;
   padding: 0 2rem;
 }
+
 section.coloredBG.light {
   background-color: var(--color_base_dark);
   padding: 0.66rem 2rem;
@@ -353,10 +378,10 @@ section.coloredBG.light {
   box-shadow: 2px 2px 10px -2px var(--color_base_dark),
   -2px -2px 10px -2px var(--color_base_dark);
 }
+
 section.coloredBG.dark {
   background-color: var(--color_pri);
   padding: 0.66rem 2rem;
-  
   box-shadow: 2px 2px 10px -2px var(--color_pri),
   -2px -2px 10px -2px var(--color_pri);
 }
@@ -364,14 +389,21 @@ section.coloredBG.dark {
 section.coloredBG.dark p {
   color: var(--color_base);
 }
-section.coloredBG.dark h1,
-section.coloredBG.dark h3 {
+
+section.coloredBG.dark h1, section.coloredBG.dark h3 {
   color: var(--color_base);
 }
+
 section.coloredBG.dark ul {
   color: var(--color_base);
 }
 
+img {
+  display: block;
+  width: 100%;
+}
+
+/*Projects page cards styles*/
 .projectCard {
   background-color: var(--color_base_dark);
   border-radius: 0.25rem;
@@ -381,7 +413,6 @@ section.coloredBG.dark ul {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-
   box-shadow: 4px 4px 10px -6px var(--color_font),
     -4px -4px 10px -6px var(--color_base_dark);
 }
@@ -393,6 +424,7 @@ section.coloredBG.dark ul {
 .projectCard.rightToLeft {
   direction: rtl;
 }
+
 .projectCard.rightToLeft p{
   direction: ltr;
 }
@@ -400,27 +432,17 @@ section.coloredBG.dark ul {
 .projectCard.leftToRight {
   direction: ltr;
 }
+
 .projectCard.leftToRight p{
   direction: ltr;
 }
 
-img {
-  display: block;
-  width: 100%;
-}
-
-li p {
-  text-align: left;
-}
-
-form p {
-  margin-bottom: 0.5em;
-}
-
+/*coming soon page styles*/
 .imgH_25 {
   max-height: 25vh;
 }
 
+/*popup styles*/
 dialog[open]{
   z-index:9;
   background-color: var(--color_base_dark);
@@ -437,6 +459,6 @@ dialog[open]{
 }
 
 
-
+/*Begin media queries*/
 @media (min-width: 768px) {
 }
