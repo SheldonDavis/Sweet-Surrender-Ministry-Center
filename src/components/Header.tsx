@@ -1,9 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
-import {
-  faChevronLeft,
-  faChevronRight,
-} from '@fortawesome/free-solid-svg-icons';
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import FullLogo from '../assets/SSMC_full_logo.svg';
