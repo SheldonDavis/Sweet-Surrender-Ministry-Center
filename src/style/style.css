@@ -466,10 +466,10 @@ nav.innerDrawer{
   position:fixed;
   top:0;
   z-index:9;
-  width:75vw;
+  width:min(75vw,200px);  
   height:100vh;
   background-color: var(--color_base_dark);
-  left:-75vw;
+  left:max(-75vw,-200px);
   box-shadow: 0px 0px 0px 0px var(--color_font),
   0px 0px 0px 0px var(--color_base_dark);
   transition:all ease-in-out .25s;
@@ -489,7 +489,7 @@ nav.innerDrawer{
   z-index:9;
 }
 .MenuButton.open {
-  left: 76vw;
+  left: min(76vw,220px);
 }
 
 .MenuButton svg {
@@ -505,7 +505,7 @@ nav.innerDrawer{
   transition: all ease-in-out.25s;
 }
 .outerDrawer.open{
-  left:75vw;
+  left:min(75vw,200px);
 }
 
 /**Begin media queries*/
