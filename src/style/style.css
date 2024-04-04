@@ -117,11 +117,10 @@
   /* font-weight: <weight>; */
 }
 
-/*Notes class - will go away for Live*/
+/**Notes class - will go away for Live*/
 .notes {
   color: var(--color_font);
   font-size: 0.75em;
-  position: relative;
   cursor: help;
 }
 .notes::before {
@@ -140,7 +139,7 @@
   content: "this text is a note that needs to be replaced. the text is small to keep it out of the way.";
   display: inline-block; 
 }*/
-/*baseline formatting for a smooth trickle down of styles*/
+/**baseline formatting for a smooth trickle down of styles*/
 :root {
   background-color: var(--color_base);
   text-align: center;
@@ -162,7 +161,7 @@ body {margin: 0;}
   text-wrap: balance;
 }
 
-/*starting point for text formatting and form elements*/
+/**starting point for text formatting and form elements*/
 h1 {
   /*
     ?font: TriRong
@@ -254,7 +253,7 @@ form p {
   margin-bottom: 0.5em;
 }
 
-/*header,nav,logo, footer*/
+/**header,nav,logo, footer*/
 header, nav {
   display: flex;
   flex-wrap: wrap;
@@ -309,7 +308,7 @@ footer p {
   font-size: 0.9em;
 }
 
-/*interactable button styles*/
+/**interactable button styles*/
 .btn {
   background-color: var(--color_accent);
   color: var(--color_base);
@@ -330,7 +329,7 @@ footer p {
     inset 2px 2px 10px -4px var(--color_font);
 }
 
-/*form notification popup*/
+/**form notification popup*/
 
 .subNotificationTile {
   position: fixed;
@@ -361,7 +360,7 @@ footer p {
 }
 
 
-/*maincontent and body styles*/
+/**maincontent and body styles*/
 body {
   place-items: normal;
 }
@@ -403,7 +402,7 @@ img {
   width: 100%;
 }
 
-/*Projects page cards styles*/
+/**Projects page cards styles*/
 .projectCard {
   background-color: var(--color_base_dark);
   border-radius: 0.25rem;
@@ -437,12 +436,12 @@ img {
   direction: ltr;
 }
 
-/*coming soon page styles*/
+/**coming soon page styles*/
 .imgH_25 {
   max-height: 25vh;
 }
 
-/*popup styles*/
+/**popup styles*/
 dialog[open]{
   z-index:9;
   background-color: var(--color_base_dark);
@@ -458,7 +457,57 @@ dialog[open]{
     -4px -4px 10px -6px var(--color_base_dark);
 }
 
+/**MobileMenu Styles**/
+#root{overflow-x:hidden;}
+nav.innerDrawer{
+  flex-direction:column;
+  justify-content:flex-start;
+  padding:2rem 0;
+  position:fixed;
+  top:0;
+  z-index:9;
+  width:75vw;
+  height:100vh;
+  background-color: var(--color_base_dark);
+  left:-75vw;
+  box-shadow: 0px 0px 0px 0px var(--color_font),
+  0px 0px 0px 0px var(--color_base_dark);
+  transition:all ease-in-out .25s;
+}
+ nav.innerDrawer.open{
+  left:0;
+  box-shadow: 4px 4px 10px -6px var(--color_font),
+    -4px -4px 10px -6px var(--color_base_dark);
+}
 
-/*Begin media queries*/
+.MenuButton {
+  position: fixed;
+  left: 1vw;
+  top: 2rem;
+  transition: left ease-in-out .25s;
+  aspect-ratio: 1;
+  z-index:9;
+}
+.MenuButton.open {
+  left: 76vw;
+}
+
+.MenuButton svg {
+  transform: scale(1, 1);
+  transition:all ease-in-out .25s; 
+}
+.MenuButton.open svg {
+  transform: scale(-1, 1);
+}
+.outerDrawer{
+  position:relative;
+  left:0;
+  transition: all ease-in-out.25s;
+}
+.outerDrawer.open{
+  left:75vw;
+}
+
+/**Begin media queries*/
 @media (min-width: 768px) {
 }

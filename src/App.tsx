@@ -2,16 +2,22 @@ import SiteRoutes from './components/routes';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ComingSoon from './pages/soon';
+import { useState } from 'react';
 
 const isLive = import.meta.env.VITE_IS_LIVE === 'true';
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // function OpenMenu() {
+  //   console.log(isMenuOpen);
+  // }
+
   return isLive ? (
     <>
-      <Header />
-      <main>
+      <Header setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} />
+      <main className={`outerDrawer ${isMenuOpen ? `open` : `closed`}`}>
         <SiteRoutes />
       </main>
-      <Footer />
+      <Footer isMenuOpen={isMenuOpen} />
     </>
   ) : (
     <ComingSoon />
