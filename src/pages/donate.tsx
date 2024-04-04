@@ -9,9 +9,10 @@ function Donate() {
         <p>
           It is with sincere gratitude that your donation is received into Sweet
           Surrender Ministry Center as a vessel through which the hands and feet
-          of Jesus are extended into the lives of those in Bedford County, PA in
-          ways that reveal life transforming hope found in relationship with
-          Jesus Christ. Thank You, we couldn't do it without YOU!
+          of Jesus are extended into the lives of those in Bedford County, PA
+          and surrounding communities in ways that reveal life transforming hope
+          found in relationship with Jesus Christ. Thank You, we couldn't do it
+          without YOU!
         </p>
       </section>
       <section className='coloredBG light'>

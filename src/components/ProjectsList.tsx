@@ -11,7 +11,7 @@ function ProjectsList() {
       title: `Birthday Blessing Box`,
       image: birthdayBlessingBox,
       description: [
-        `A birthday party in a cakebox is given to elementary school aged children who may not otherwise receive a celebration for their special day. Boxes include a cake mix, round pan, can of soda for cake mixture with recipe card, icing, candles, birthday card, crown, stickers, a bow, party favors, fun socks, age-appropriate STEM activity, and other small gifts. Boxes are distributed through the local school districts.`,
+        `A birthday party in a cakebox is given to elementary school aged children who may not otherwise receive a celebration for their special day. Boxes include a cake mix, round pan, can of soda for cake mixture with recipe card, icing, candles, birthday card, crown, stickers, a bow, party favors, fun socks, age-appropriate STEM activity, and other small gifts. Boxes are distributed through partnering local school districts.`,
       ],
     },
     {
@@ -25,7 +25,7 @@ function ProjectsList() {
       title: `Manna Monday`,
       image: MannaMonday,
       description: [
-        `Beginning with one Monday per month, we offer a free lunch of sustenance to anyone whether by need of physical hunger, social hunger, or spiritual hunger. Packaged meal distribution takes place at a public community site or civic organization location until a permanent location is secured with a dine-in community space.`,
+        `Beginning with one Monday per month, free lunch of sustenance is offered to anyone whether by need of physical hunger, social hunger, or spiritual hunger. Packaged meal distribution takes place at a public community site or civic organization location until a permanent location is secured with a dine-in community space.`,
       ],
     },
     {
