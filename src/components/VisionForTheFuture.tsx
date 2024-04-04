@@ -2,11 +2,11 @@ interface Properties {
   classes?: string;
 }
 
-function VisionOfTheFuture(props: Properties) {
+function VisionForTheFuture(props: Properties) {
   const { classes } = props;
   return (
     <section id={`VisionOfTheFuture`} className={classes}>
-      <h3>Vision of the Future of SSMC</h3>
+      <h3>Vision for the Future of SSMC</h3>
       <p>
         With anticipated growth stemming from our four start-up projects, the
         overarching vision is to secure a physical brick and mortar location for
@@ -21,4 +21,4 @@ function VisionOfTheFuture(props: Properties) {
     </section>
   );
 }
-export default VisionOfTheFuture;
+export default VisionForTheFuture;
