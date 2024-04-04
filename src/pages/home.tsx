@@ -3,11 +3,11 @@
 // import {db} from '../config/firebaseConfig.tsx';
 
 //importing components
-import WhoWeAre from "../components/WhoWeAre";
-import Mission from "../components/Mission.tsx";
-import VisionOfTheFuture from "../components/VisionOfTheFuture.tsx";
-import CoreValues from "../components/CoreValues.tsx";
-import HowToHelp from "../components/HowToHelp.tsx";
+import WhoWeAre from '../components/WhoWeAre';
+import Mission from '../components/Mission.tsx';
+import VisionForTheFuture from '../components/VisionForTheFuture.tsx';
+import CoreValues from '../components/CoreValues.tsx';
+import HowToHelp from '../components/HowToHelp.tsx';
 
 // interface User{
 //   id:string;
@@ -43,11 +43,11 @@ function Home() {
   return (
     <>
       <h1>Sweet Surrender Ministry Center</h1>
-      <WhoWeAre classes={``}/>
-      <VisionOfTheFuture classes={`coloredBG light`}/>
-      <Mission classes={``}/>
-      <CoreValues classes={``}/>
-      <HowToHelp classes={`coloredBG dark`}/>
+      <WhoWeAre classes={``} />
+      <VisionForTheFuture classes={`coloredBG light`} />
+      <Mission classes={``} />
+      <CoreValues classes={``} />
+      <HowToHelp classes={`coloredBG dark`} />
 
       {/*
         isLoading?
