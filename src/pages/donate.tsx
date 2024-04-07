@@ -53,7 +53,7 @@ function Donate() {
             <u>United State Postal Service:</u>
           </strong>{' '}
           Checks made payable to Sweet Surrender Ministry Center can be mailed
-          to PO Box _____, Alum Bank, PA 15521. After a successful banking
+          to P.O. Box #206, Alum Bank, PA 15521. After a successful banking
           transaction, a tax deductible charitable donation receipt will be
           mailed to the person and address listed on the donation check
           received.
