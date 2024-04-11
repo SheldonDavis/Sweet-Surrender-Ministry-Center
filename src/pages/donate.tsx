@@ -26,25 +26,14 @@ function Donate() {
           ]}
         />
 
-        <form>
-          <p className={`notes`}>placeholder form</p>
-          <p>
-            <label>donator name </label>
-            <input type='text' />
-          </p>
-          <p>
-            <label>donation amount </label>
-            <input type='text' />
-          </p>
-          <p>
-            <label>large text area </label>
-            <textarea></textarea>
-          </p>
-          <p>
-            <input type='checkbox' />
-            <label> Checkbox</label>
-          </p>
-        </form>
+        <div className={`ZeffyFormWrapper`}>
+          <iframe
+            title='Donation form powered by Zeffy'
+            src='https://www.zeffy.com/en-US/embed/donation-form/1816337f-ba23-45e8-9d0d-6e106bed3ceb'
+            className={`ZeffyFormIFrame`}
+            allowTransparency
+          ></iframe>
+        </div>
       </section>
       <section>
         <h3>Other Ways to Contribute</h3>
