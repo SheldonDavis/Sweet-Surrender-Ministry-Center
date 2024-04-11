@@ -4,6 +4,8 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import FullLogo from '../assets/SSMC_full_logo.svg';
+import Logo_Text from '../assets/SSMC_Logo_Text.svg';
+import Logo_Icon from '../assets/SSMC_Logo_Icon.svg';
 
 interface Link {
   text: string;
@@ -75,7 +77,27 @@ function Header(props: Properties) {
         <a href={`/`} className={`fullLogoLink`} onClick={handle_menuClose}>
           <img
             src={FullLogo}
-            alt={`Sweet Surrender Ministry Center Logo text with icon`}
+            alt={`Sweet Surrender Ministry Center Logo Icon with text`}
+          />
+        </a>
+        <a
+          href={`/`}
+          className={`LogoLink_Text hideME`}
+          onClick={handle_menuClose}
+        >
+          <img
+            src={Logo_Text}
+            alt={`Sweet Surrender Ministry Center Logo Text`}
+          />
+        </a>
+        <a
+          href={`/`}
+          className={`LogoLink_Icon hideME`}
+          onClick={handle_menuClose}
+        >
+          <img
+            src={Logo_Icon}
+            alt={`Sweet Surrender Ministry Center Logo Icon`}
           />
         </a>
         <button
