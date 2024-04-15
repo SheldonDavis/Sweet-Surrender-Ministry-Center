@@ -49,7 +49,7 @@ const links: Array<Link> = [
     text: 'Legal',
     url: '/legal',
     optClasses: '',
-    active: false,
+    active: true,
   },
   {
     text: 'Other',

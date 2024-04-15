@@ -157,7 +157,7 @@ body {
 
 #root {
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 2rem 0 0;
   text-align: center;
   font-size: 18px;
   text-wrap: balance;
@@ -407,6 +407,11 @@ section.coloredBG.dark h3 {
 section.coloredBG.dark ul {
   color: var(--color_base);
 }
+
+main section.coloredBG:last-of-type{
+  margin-bottom: 0;
+}
+
 
 img {
   display: block;
