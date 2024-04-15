@@ -5,7 +5,6 @@ import { FormEvent } from 'react';
 //icons
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Email from './EmailInfo';
 
 //Environmental Variable prefix
 const ENV = import.meta.env;
