@@ -5,6 +5,7 @@ import { FormEvent } from 'react';
 //icons
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Email from './EmailInfo';
 
 //Environmental Variable prefix
 const ENV = import.meta.env;
@@ -19,31 +20,47 @@ interface SubmissionStatus {
 }
 
 async function sendNotification(target: HTMLFormElement) {
-  let { ContactEmail, Question } = target;
+  let { ContactEmail, Question, FirstName, LastName, Prayers } = target;
   ContactEmail = ContactEmail.value;
   Question = Question.value;
+  FirstName = FirstName.value;
+  LastName = LastName.value;
+  Prayers = Prayers.value;
 
-  // console.log(target)
-  // console.log(ContactEmail)
-  // console.log(Question)
-  //return{status:'success',responseText:'success testings'}
   //make sure email is valid
   if (!EMAIL_REGEX.test(ContactEmail))
     return { status: 'error', responseText: 'Bad Contact Email' };
   Question = JSON.stringify(Question);
+  FirstName = JSON.stringify(FirstName);
+  LastName = JSON.stringify(LastName);
+  Prayers = JSON.stringify(Prayers);
+  // console.log(Question);
+  // console.log(FirstName);
+  // console.log(LastName);
+  // console.log(Prayers);
+  // return { status: 'success', responseText: 'success testings' };
   try {
     let theBody = ``;
-    theBody += `<p><strong>New contact form submission from: ${ContactEmail}</strong></p>`;
+    theBody += `<p><strong>New contact form submission from: ${FirstName} ${LastName} - ${ContactEmail}</strong></p>`;
+    theBody += `<p><strong>First Name:</strong> ${FirstName}</p>`;
+    theBody += `<p><strong>Last Name:</strong> ${LastName}</p>`;
+    theBody += `<p><strong>Email:</strong> ${ContactEmail}</p>`;
     theBody += `<p>They would like to know:</p>`;
     theBody += `<p>${Question}</p>`;
+    theBody += `<p>Prayer Request:</p>`;
+    theBody += `<p>${Prayers}</p>`;
 
     const templateParams: Record<string, string> = {
-      emailSubject: 'testing email submission through website',
+      emailSubject: 'Sweet Surrender Ministry Center Contact Form Submission',
       emailBody: theBody,
       emailSender: ContactEmail,
       emailQuestion: Question,
+      emailSenderFName: FirstName,
+      emailSenderLName: LastName,
+      emialPrayers: Prayers,
     };
 
+    // return { status: 'success', responseText: 'success testings' };
     await emailjs
       .send(
         ENV.VITE_EMAILJS_SERVICE_ID,
@@ -52,12 +69,16 @@ async function sendNotification(target: HTMLFormElement) {
         ENV.VITE_EMAILJS_PUBLIC_API_KEY
       )
       .then(
-        (result) => {
-          console.log(`email sent with response: ${result.text}`);
-        },
+        // (result) => {
+        //   console.log(`email sent with response: ${result.text}`);
+        // },
         (error) => {
           console.error(`ERROR: ${error}`);
-          return { status: 'error', responseText: 'An error has occured' };
+          return {
+            status: 'error',
+            responseText:
+              'An error has occured, Please try again later or email SSMC directly.',
+          };
         }
       );
     return { status: 'success', responseText: `An email has been submitted.` };
@@ -125,7 +146,27 @@ function QuestionsForm() {
 
           <form onSubmit={handleSubmit}>
             <p>
-              <label htmlFor='ContactEmail'>Your Email:</label>&nbsp;
+              <label htmlFor={`FirstName`}>First Name</label>&nbsp;
+              <input
+                type={`text`}
+                id={`FirstName`}
+                name={`FirstName`}
+                required
+                placeholder={`First Name`}
+              />
+            </p>
+            <p>
+              <label htmlFor={`LastName`}>Last Name</label>&nbsp;
+              <input
+                type={`text`}
+                id={`LastName`}
+                name={`LastName`}
+                required
+                placeholder={`Last Name`}
+              />
+            </p>
+            <p>
+              <label htmlFor='ContactEmail'>Email:</label>&nbsp;
               <input
                 type='email'
                 id='ContactEmail'
@@ -135,14 +176,25 @@ function QuestionsForm() {
               />
             </p>
             <p>
-              <label htmlFor='Question'>Your Question:</label>
+              <label htmlFor='Question'>Questions For SSMC:</label>
               <br />
               <textarea
                 id='Question'
                 name='Question'
                 required
                 placeholder='I would like to know more about...'
-                rows={10}
+                rows={5}
+              ></textarea>
+            </p>
+            <p>
+              <label htmlFor='Prayers'>How Can We Pray For You?:</label>
+              <br />
+              <textarea
+                id='Prayers'
+                name='Prayers'
+                required
+                placeholder='I would like prayers for...'
+                rows={5}
               ></textarea>
             </p>
             <p>
@@ -162,16 +214,15 @@ function QuestionsForm() {
               )}
             </p>
           </form>
+          <p>
+            Or send an email directly to&nbsp;
+            <a href={`mailto:sweetsurrendermc@gmail.com`}>
+              sweetsurrendermc@gmail.com
+            </a>
+            .
+          </p>
         </>
       )}
-
-      <p>
-        Or send an email directly to&nbsp;
-        <a href={`mailto:sweetsurrendermc@gmail.com`}>
-          sweetsurrendermc@gmail.com
-        </a>
-        .
-      </p>
     </section>
   );
 }
