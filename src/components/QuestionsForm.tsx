@@ -138,11 +138,6 @@ function QuestionsForm() {
         <>
           <h3>Email Your Questions Here</h3>
 
-          <p className={`notes`}>
-            need to know if there are any additional information need to be
-            gathered during this form.
-          </p>
-
           <form onSubmit={handleSubmit}>
             <p>
               <label htmlFor={`FirstName`}>First Name</label>&nbsp;

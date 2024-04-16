@@ -159,7 +159,7 @@ body {
   margin: 0 auto;
   padding: 2rem 0 0;
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
   text-wrap: balance;
 }
 
@@ -530,6 +530,9 @@ nav.innerDrawer.open {
 .hideME {
   display: none !important;
 }
+.LogoLink_Text{display:none;}
+
+.fullLogoLink.hideME{display:block!important;}
 
 .ZeffyFormWrapper {
   position: relative;
@@ -545,4 +548,24 @@ nav.innerDrawer.open {
 }
 /**Begin media queries*/
 @media (min-width: 768px) {
+
+  nav.innerDrawer {
+    position: static;
+    width: auto;
+    height: auto;
+    flex-direction: row;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .MenuButton{display:none;}
+  header{flex-direction:row;background-color:var(--color_base);}
+  header.shadowAdded{box-shadow: 4px 4px 10px -6px var(--color_font);}
+  header.outerDrawer{position:sticky; top:0;z-index:8;}
+  header>a{margin-bottom:0; padding:0;}
+  .fullLogoLink img{max-width: 250px;}
+  .LogoLink_Text img{max-width:150px;}
+  
+.LogoLink_Text{display:block;}
+.fullLogoLink.hideME{display:none!important;}
+  #root{overflow-x:initial;padding-top:0 ;}
 }

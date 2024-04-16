@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import FullLogo from '../assets/SSMC_full_logo.svg';
 import Logo_Text from '../assets/SSMC_Logo_Text.svg';
 import Logo_Icon from '../assets/SSMC_Logo_Icon.svg';
+import { useState } from 'react';
 
 interface Link {
   text: string;
@@ -65,16 +66,33 @@ interface Properties {
 }
 function Header(props: Properties) {
   const { setIsMenuOpen, isMenuOpen } = props;
+  const [scrollPos, setScrollPos] = useState(0);
   function handle_menuToggle() {
     setIsMenuOpen(!isMenuOpen);
   }
   function handle_menuClose() {
     setIsMenuOpen(false);
   }
+
+  const handleScroll = () => {
+    const position = window.scrollY;
+    setScrollPos(position);
+  };
+  const breakpoint = 1;
+  window.addEventListener('scroll', handleScroll);
+
   return (
     <>
-      <header className={`outerDrawer ${isMenuOpen ? `open` : `closed`}`}>
-        <a href={`/`} className={`fullLogoLink`} onClick={handle_menuClose}>
+      <header
+        className={`outerDrawer ${isMenuOpen ? `open` : `closed`} ${
+          scrollPos >= breakpoint ? `shadowAdded` : ``
+        }`}
+      >
+        <a
+          href={`/`}
+          className={`fullLogoLink ${scrollPos >= breakpoint ? `hideME` : ``}`}
+          onClick={handle_menuClose}
+        >
           <img
             src={FullLogo}
             alt={`Sweet Surrender Ministry Center Logo Icon with text`}
@@ -82,7 +100,9 @@ function Header(props: Properties) {
         </a>
         <a
           href={`/`}
-          className={`LogoLink_Text hideME`}
+          className={`LogoLink_Text  ${
+            scrollPos >= breakpoint ? `` : `hideME`
+          }`}
           onClick={handle_menuClose}
         >
           <img
@@ -92,7 +112,9 @@ function Header(props: Properties) {
         </a>
         <a
           href={`/`}
-          className={`LogoLink_Icon hideME`}
+          className={`LogoLink_Icon ${
+            scrollPos >= breakpoint ? `hideME` : `hideME`
+          }`}
           onClick={handle_menuClose}
         >
           <img
