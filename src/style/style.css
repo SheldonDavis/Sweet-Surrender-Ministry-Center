@@ -185,6 +185,7 @@ h3 {
     ?weight: 400
     ?size: 40px
   */
+
   font-family: 'Mulish', sans-serif;
   font-family: 'Trirong', serif;
   font-weight: 400;
@@ -245,12 +246,16 @@ a:hover {
   color: var(--color_pri);
 }
 
-ul {
+ul,
+ol {
   color: var(--color_font);
+  width: fit-content;
+  margin: 0 auto;
+  display: block;
 }
 
 textarea {
-  width: 100%;
+  width: min(100%, 750px);
   resize: none;
 }
 
@@ -408,10 +413,9 @@ section.coloredBG.dark ul {
   color: var(--color_base);
 }
 
-main section.coloredBG:last-of-type{
+main section.coloredBG:last-of-type {
   margin-bottom: 0;
 }
-
 
 img {
   display: block;
@@ -530,9 +534,13 @@ nav.innerDrawer.open {
 .hideME {
   display: none !important;
 }
-.LogoLink_Text{display:none;}
+.LogoLink_Text {
+  display: none;
+}
 
-.fullLogoLink.hideME{display:block!important;}
+.fullLogoLink.hideME {
+  display: block !important;
+}
 
 .ZeffyFormWrapper {
   position: relative;
@@ -546,9 +554,16 @@ nav.innerDrawer.open {
   height: 100%;
   border: none;
 }
+
+.sideToSide {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-bottom: 3.5rem;
+}
 /**Begin media queries*/
 @media (min-width: 768px) {
-
   nav.innerDrawer {
     position: static;
     width: auto;
@@ -557,15 +572,134 @@ nav.innerDrawer.open {
     background-color: transparent;
     box-shadow: none;
   }
-  .MenuButton{display:none;}
-  header{flex-direction:row;background-color:var(--color_base);}
-  header.shadowAdded{box-shadow: 4px 4px 10px -6px var(--color_font);}
-  header.outerDrawer{position:sticky; top:0;z-index:8;}
-  header>a{margin-bottom:0; padding:0;}
-  .fullLogoLink img{max-width: 250px;}
-  .LogoLink_Text img{max-width:150px;}
-  
-.LogoLink_Text{display:block;}
-.fullLogoLink.hideME{display:none!important;}
-  #root{overflow-x:initial;padding-top:0 ;}
+  .MenuButton {
+    display: none;
+  }
+  header {
+    flex-direction: row;
+    background-color: var(--color_base);
+  }
+  header.shadowAdded {
+    box-shadow: 4px 4px 10px -6px var(--color_font);
+  }
+  header.outerDrawer {
+    position: sticky;
+    top: 0;
+    z-index: 8;
+  }
+  header > a {
+    margin-bottom: 0;
+    padding: 0;
+  }
+  .fullLogoLink img {
+    max-width: 250px;
+  }
+  .LogoLink_Text img {
+    max-width: 100px;
+  }
+
+  .LogoLink_Text {
+    display: block;
+  }
+  .fullLogoLink.hideME {
+    display: none !important;
+  }
+  #root {
+    overflow-x: initial;
+    padding-top: 0;
+  }
+
+  .sideToSide {
+    flex-direction: row;
+    margin: 0 1rem 2rem;
+    width: calc(100% - 2rem);
+    gap: 1rem;
+  }
+
+  .sideToSide section,
+  .sideToSide div {
+    width: calc(50% - 0.5em);
+    padding: 0 0.5rem;
+  }
+  form.sideToSide {
+    flex-wrap: wrap;
+  }
+  form.sideToSide div {
+    width: calc(50% - 1.5em);
+  }
+  form.sideToSide div p {
+    white-space: nowrap;
+    text-align: left;
+  }
+
+  form.sideToSide .contactInfo p label {
+    text-align: right;
+    width: 25%;
+    display: inline-block;
+  }
+  form.sideToSide .contactInfo p input {
+    text-align: left;
+    width: 75%;
+    display: inline-block;
+  }
+  .contactInfo {
+    margin-top: 1.75rem;
+  }
+
+  .sideToSide section.light {
+    padding: 0.66rem 0.5rem;
+    border-radius: 0.25em;
+    box-shadow: 4px 4px 10px -6px var(--color_font),
+      -4px -4px 10px -6px var(--color_base_dark);
+  }
+  p.sendButtonWrapper {
+    width: 100%;
+  }
+
+  #ProjectList {
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: baseline; */
+    flex-wrap: wrap;
+  }
+  #ProjectList h1 {
+    width: 100%;
+  }
+  .projectCard {
+    max-width: 42%;
+  }
+
+  .ZeffyFormWrapper {
+    height: 1695px;
+  }
+}
+
+@media (min-width: 1080px) {
+  header {
+    justify-content: space-evenly;
+  }
+  .sideToSide {
+    justify-content: space-evenly;
+  }
+  .sideToSide section {
+    width: calc(40% - 0.5em);
+  }
+  #ProjectList {
+    align-items: normal;
+    justify-content: space-between;
+  }
+  .projectCard {
+    max-width: 28%;
+  }
+  .ZeffyFormWrapper {
+    height: 1478px;
+  }
+ 
+}
+
+@media (min-width: 1280px) {
+  .projectCard {
+    max-width: 22%;
+  }
+
 }
