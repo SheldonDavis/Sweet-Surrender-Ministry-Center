@@ -3,10 +3,11 @@ interface Properties {
   description: Array<string>;
   image: string;
   orientation: boolean;
+  link?: string;
 }
 
 function Project(props: Properties) {
-  const { title, description, image, orientation } = props;
+  const { title, description, image, orientation, link } = props;
   return (
     <section
       className={`projectCard ${orientation ? `rightToLeft` : `leftToRight`}`}
@@ -19,6 +20,17 @@ function Project(props: Properties) {
         {description.map((p, i) => {
           return <p key={i}>{p}</p>;
         })}
+        {link && (
+          <>
+            <a href={link} target={`_blank`}>
+              View Amazon Wishlist
+            </a>
+            <p className={`notes`}>
+              This is will be a link to the amazon wishlist if there is an
+              associated wishlist for this project
+            </p>
+          </>
+        )}
       </div>
     </section>
   );
