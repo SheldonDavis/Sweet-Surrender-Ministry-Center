@@ -62,6 +62,11 @@ function Donate() {
           examples and are not meant to restrict your donation creativity within
           the scope of vision for each project.
         </p>
+        <p className={`notes`}>
+          link to amazon wishlist: maybe we link back to the projects page
+          instead so they can get more information on the project they wish to
+          donate a gift to?
+        </p>
       </section>
     </>
   );
