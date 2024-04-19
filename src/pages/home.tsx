@@ -43,8 +43,10 @@ function Home() {
   return (
     <>
       <h1>Sweet Surrender Ministry Center</h1>
-      <WhoWeAre classes={``} />
-      <VisionForTheFuture classes={`coloredBG light`} />
+      <div className={`sideToSide`}>
+        <WhoWeAre classes={``} />
+        <VisionForTheFuture classes={`coloredBG light`} />
+      </div>
       <Mission classes={``} />
       <CoreValues classes={``} />
       <HowToHelp classes={`coloredBG dark`} />

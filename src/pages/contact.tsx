@@ -14,8 +14,11 @@ function Contact() {
           contact SSMC, etc.
         </p> */}
       </section>
-      <Phone />
-      <Mail />
+
+      <div className={`sideToSide`}>
+        <Phone />
+        <Mail />
+      </div>
       {/* <Email/> */}
       <QuestionsForm />
     </>

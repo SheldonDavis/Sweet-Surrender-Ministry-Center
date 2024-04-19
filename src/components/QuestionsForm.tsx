@@ -138,60 +138,64 @@ function QuestionsForm() {
         <>
           <h3>Email Your Questions Here</h3>
 
-          <form onSubmit={handleSubmit}>
-            <p>
-              <label htmlFor={`FirstName`}>First Name</label>&nbsp;
-              <input
-                type={`text`}
-                id={`FirstName`}
-                name={`FirstName`}
-                required
-                placeholder={`First Name`}
-              />
-            </p>
-            <p>
-              <label htmlFor={`LastName`}>Last Name</label>&nbsp;
-              <input
-                type={`text`}
-                id={`LastName`}
-                name={`LastName`}
-                required
-                placeholder={`Last Name`}
-              />
-            </p>
-            <p>
-              <label htmlFor='ContactEmail'>Email:</label>&nbsp;
-              <input
-                type='email'
-                id='ContactEmail'
-                name='ContactEmail'
-                required
-                placeholder='example@example.com'
-              />
-            </p>
-            <p>
-              <label htmlFor='Question'>Questions For SSMC:</label>
-              <br />
-              <textarea
-                id='Question'
-                name='Question'
-                required
-                placeholder='I would like to know more about...'
-                rows={5}
-              ></textarea>
-            </p>
-            <p>
-              <label htmlFor='Prayers'>How Can We Pray For You?:</label>
-              <br />
-              <textarea
-                id='Prayers'
-                name='Prayers'
-                required
-                placeholder='I would like prayers for...'
-                rows={5}
-              ></textarea>
-            </p>
-            <p>
+          <form onSubmit={handleSubmit} className={`sideToSide`}>
+            <div className={`contactInfo`}>
+              <p>
+                <label htmlFor={`FirstName`}>First Name:</label>&nbsp;
+                <input
+                  type={`text`}
+                  id={`FirstName`}
+                  name={`FirstName`}
+                  required
+                  placeholder={`First Name`}
+                />
+              </p>
+              <p>
+                <label htmlFor={`LastName`}>Last Name:</label>&nbsp;
+                <input
+                  type={`text`}
+                  id={`LastName`}
+                  name={`LastName`}
+                  required
+                  placeholder={`Last Name`}
+                />
+              </p>
+              <p>
+                <label htmlFor='ContactEmail'>Email:</label>&nbsp;
+                <input
+                  type='email'
+                  id='ContactEmail'
+                  name='ContactEmail'
+                  required
+                  placeholder='example@example.com'
+                />
+              </p>
+            </div>
+            <div className={`questionsPrayers`}>
+              <p>
+                <label htmlFor='Question'>Questions For SSMC:</label>
+                <br />
+                <textarea
+                  id='Question'
+                  name='Question'
+                  required
+                  placeholder='I would like to know more about...'
+                  rows={5}
+                ></textarea>
+              </p>
+              <p>
+                <label htmlFor='Prayers'>How Can We Pray For You?:</label>
+                <br />
+                <textarea
+                  id='Prayers'
+                  name='Prayers'
+                  required
+                  placeholder='I would like prayers for...'
+                  rows={5}
+                ></textarea>
+              </p>
+            </div>
+            <p className={`sendButtonWrapper`}>
               {Loading ? (
                 <>
                   <FontAwesomeIcon
