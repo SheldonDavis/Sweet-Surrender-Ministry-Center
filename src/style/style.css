@@ -562,6 +562,14 @@ nav.innerDrawer.open {
   flex-wrap: nowrap;
   margin-bottom: 3.5rem;
 }
+
+.coloredBG.dark a{
+  color:var(--color_base_dark)
+}
+.coloredBG.dark a:hover{
+  color:var(--color_accent);
+}
+
 /**Begin media queries*/
 @media (min-width: 768px) {
   nav.innerDrawer {
@@ -645,8 +653,8 @@ nav.innerDrawer.open {
   .contactInfo {
     margin-top: 1.75rem;
   }
-
-  .sideToSide section.light {
+  #PhoneInfo{background-color: var(--color_base_dark);margin-bottom:0;}
+  .sideToSide section.light, #PhoneInfo {
     padding: 0.66rem 0.5rem;
     border-radius: 0.25em;
     box-shadow: 4px 4px 10px -6px var(--color_font),
@@ -700,6 +708,11 @@ nav.innerDrawer.open {
 @media (min-width: 1280px) {
   .projectCard {
     max-width: 22%;
+  }
+  #TheMission p {
+      max-width: 1080px;
+      margin: 0 auto;
+      text-wrap:wrap;
   }
 
 }
