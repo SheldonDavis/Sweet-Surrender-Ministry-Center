@@ -1,17 +1,19 @@
+interface Wishlist {
+  btnTxt: string;
+  url: string;
+}
 interface Properties {
   title: string;
   description: Array<string>;
   image: string;
   orientation: boolean;
-  link?: string;
+  wishlist: Array<Wishlist>;
 }
 
 function Project(props: Properties) {
-  const { title, description, image, orientation, link } = props;
+  const { title, description, image, orientation, wishlist } = props;
   return (
-    <section
-      className={`projectCard ${orientation ? `rightToLeft` : `leftToRight`}`}
-    >
+    <section className={`projectCard ${orientation ? `rightToLeft` : `leftToRight`}`}>
       <p className={`projectImage`}>
         <img src={image} alt={title} />
       </p>
@@ -20,7 +22,20 @@ function Project(props: Properties) {
         {description.map((p, i) => {
           return <p key={i}>{p}</p>;
         })}
-        {link && (
+
+        {wishlist.map((link: Wishlist, i) => {
+          return (
+            <>
+              <p>
+                <a key={i} href={link.url} target={`_blank`}>
+                  {link.btnTxt}
+                </a>
+              </p>
+            </>
+          );
+        })}
+
+        {/* {link && (
           <>
             <a href={link} target={`_blank`}>
               View Amazon Wishlist
@@ -30,7 +45,7 @@ function Project(props: Properties) {
               associated wishlist for this project
             </p>
           </>
-        )}
+        )} */}
       </div>
     </section>
   );
