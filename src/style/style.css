@@ -570,6 +570,15 @@ nav.innerDrawer.open {
   color:var(--color_accent);
 }
 
+.LogoLink_Text img{
+  min-height:3em;
+}
+
+.fullLogoLink img{
+  min-height:8em;
+}
+
+
 /**Begin media queries*/
 @media (min-width: 768px) {
   nav.innerDrawer {
