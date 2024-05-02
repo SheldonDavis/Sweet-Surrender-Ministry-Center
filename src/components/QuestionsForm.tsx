@@ -106,7 +106,11 @@ function QuestionsForm() {
 
   return (
     <section>
-      <div className={`subNotificationTile ${submissionResponse.status && `active`} ${submissionResponse.status === 'success' ? `good` : submissionResponse.status === 'error' ? `bad` : ''} `}>
+      <div
+        className={`subNotificationTile ${submissionResponse.status && `active`} ${
+          submissionResponse.status === 'success' ? `good` : submissionResponse.status === 'error' ? `bad` : ''
+        } `}
+      >
         <span>{submissionResponse.responseText}</span>
       </div>
       {Message ? (
@@ -158,7 +162,7 @@ function QuestionsForm() {
           </form>
           <p>
             Or send an email directly to&nbsp;
-            <a href={`mailto:sweetsurrendermc@gmail.com`}>sweetsurrendermc@gmail.com</a>.
+            <a href={`mailto:contact@sweetsurrendermc.org`}>contact@sweetsurrendermc.org</a>.
           </p>
         </>
       )}

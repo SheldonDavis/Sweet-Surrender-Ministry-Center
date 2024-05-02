@@ -3,9 +3,7 @@ function Email() {
     <section className={``}>
       <h3>E-mail</h3>
       <p>
-        <a href={`mailto:sweetsurrendermc@gmail.com`}>
-          sweetsurrendermc@gmail.com
-        </a>
+        <a href={`mailto:contact@sweetsurrendermc.org`}>contact@sweetsurrendermc.org</a>
       </p>
     </section>
   );
