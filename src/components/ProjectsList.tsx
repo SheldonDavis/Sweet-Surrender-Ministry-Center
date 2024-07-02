@@ -99,7 +99,7 @@ function ProjectsList() {
         {currentProjects.map((project, i) => {
           return (
             <Project
-              key={project.id}
+              key={i}
               id={project.id}
               title={project.title}
               image={project.image}
@@ -119,7 +119,7 @@ function ProjectsList() {
         {futureProjects.map((project, i) => {
           return (
             <Project
-              key={project.id}
+              key={i}
               id={project.id}
               title={project.title}
               image={project.image}

@@ -17,7 +17,7 @@ interface Properties {
 function Project(props: Properties) {
   const { id, title, description, image, orientation, wishlist, readMore } = props;
   return (
-    <section className={`projectCard ${orientation ? `rightToLeft` : `leftToRight`}`} key={`${id}_sect`}>
+    <section className={`projectCard ${orientation ? `rightToLeft` : `leftToRight`}`} key={`${id}_section`}>
       <p className={`projectImage`} key={`${id}_title`}>
         <img src={image} alt={title} />
       </p>
