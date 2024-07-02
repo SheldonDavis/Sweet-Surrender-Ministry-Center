@@ -350,6 +350,8 @@ footer p {
   font-size: 0.9em;
 }
 
+
+
 /**interactable button styles*/
 .btn {
   background-color: var(--color_accent);
@@ -440,7 +442,7 @@ section.coloredBG.dark ul {
   color: var(--color_base);
 }
 
-main section.coloredBG:last-of-type {
+/*main section.coloredBG:last-of-type*/ #HowToHelp, #ExpandingOpportunities {
   margin-bottom: 0;
 }
 
@@ -690,7 +692,8 @@ nav.innerDrawer.open {
     margin-top: 1.75rem;
   }
   #PhoneInfo{background-color: var(--color_base_dark);margin-bottom:0;}
-  .sideToSide section.light, #PhoneInfo {
+  .sideToSide section.light, #PhoneInfo, #WhoWeAre {
+    background-color: var(--color_base_dark);
     padding: 0.66rem 0.5rem;
     border-radius: 0.25em;
     box-shadow: 4px 4px 10px -6px var(--color_font),
