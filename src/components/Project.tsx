@@ -1,33 +1,37 @@
+import DialogPopup from './DialogPopup';
+
 interface Wishlist {
   btnTxt: string;
   url: string;
 }
 interface Properties {
+  id: string;
   title: string;
   description: Array<string>;
+  readMore: Array<string>;
   image: string;
   orientation: boolean;
   wishlist: Array<Wishlist>;
 }
 
 function Project(props: Properties) {
-  const { title, description, image, orientation, wishlist } = props;
+  const { id, title, description, image, orientation, wishlist, readMore } = props;
   return (
-    <section className={`projectCard ${orientation ? `rightToLeft` : `leftToRight`}`}>
-      <p className={`projectImage`}>
+    <section className={`projectCard ${orientation ? `rightToLeft` : `leftToRight`}`} key={`${id}_sect`}>
+      <p className={`projectImage`} key={`${id}_title`}>
         <img src={image} alt={title} />
       </p>
-      <div className={`projectText`}>
-        <h3>{title}</h3>
-        {description.map((p, i) => {
-          return <p key={i}>{p}</p>;
+      <div className={`projectText`} key={`${id}_text`}>
+        <h3 key={`${id}_title_text`}>{title}</h3>
+        {description.map((p, ii) => {
+          return <p key={ii}>{p}</p>;
         })}
 
-        {wishlist.map((link: Wishlist, i) => {
+        {wishlist.map((link: Wishlist, iii) => {
           return (
             <>
-              <p>
-                <a key={i} href={link.url} target={`_blank`}>
+              <p key={iii}>
+                <a href={link.url} target={`_blank`}>
                   {link.btnTxt}
                 </a>
               </p>
@@ -35,17 +39,7 @@ function Project(props: Properties) {
           );
         })}
 
-        {/* {link && (
-          <>
-            <a href={link} target={`_blank`}>
-              View Amazon Wishlist
-            </a>
-            <p className={`notes`}>
-              This is will be a link to the amazon wishlist if there is an
-              associated wishlist for this project
-            </p>
-          </>
-        )} */}
+        {readMore.length > 0 && <DialogPopup openBtnTxt={`Read More`} ModalTitle={`Read more about ${title}`} BodyText={readMore} />}
       </div>
     </section>
   );
