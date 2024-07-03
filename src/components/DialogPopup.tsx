@@ -31,14 +31,15 @@ function DialogPopup(props: Properties) {
         </p>
       </dialog>
       <p>
-        <a
+        <button
           className={`btn`}
           onClick={() => {
             handle_toggleOpen();
           }}
+          tabindex='0'
         >
           {openBtnTxt}
-        </a>
+        </button>
       </p>
     </>
   );
