@@ -36,7 +36,6 @@ function DialogPopup(props: Properties) {
           onClick={() => {
             handle_toggleOpen();
           }}
-          tabindex='0'
         >
           {openBtnTxt}
         </button>
