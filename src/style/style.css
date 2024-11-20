@@ -691,7 +691,7 @@ nav.innerDrawer.open {
   .contactInfo {
     margin-top: 1.75rem;
   }
-  #PhoneInfo{background-color: var(--color_base_dark);margin-bottom:0;}
+  #PhoneInfo{background-color: var(--color_base_dark);}
   .sideToSide section.light, #PhoneInfo, #WhoWeAre {
     background-color: var(--color_base_dark);
     padding: 0.66rem 0.5rem;
