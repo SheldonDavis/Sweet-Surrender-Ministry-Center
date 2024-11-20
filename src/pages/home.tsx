@@ -5,7 +5,7 @@
 //importing components
 import WhoWeAre from '../components/WhoWeAre';
 import Mission from '../components/Mission.tsx';
-import VisionForTheFuture from '../components/VisionForTheFuture.tsx';
+// import VisionForTheFuture from '../components/VisionForTheFuture.tsx';
 import CoreValues from '../components/CoreValues.tsx';
 import HowToHelp from '../components/HowToHelp.tsx';
 
