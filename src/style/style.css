@@ -607,6 +607,9 @@ nav.innerDrawer.open {
   min-height:8em;
 }
 
+#WhoWeAre{
+  margin-bottom:0;
+}
 
 /**Begin media queries*/
 @media (min-width: 768px) {
