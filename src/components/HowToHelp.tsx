@@ -13,12 +13,12 @@ function HowToHelp(props: Properties) {
           </p>
         </li>
         <li>
-          <p>Volunteer Service Time</p>
-        </li>
-        <li>
           <p>
             <a href={`/donate`}>Donation</a> of Project Specific Goods
           </p>
+        </li>
+        <li>
+          <p>Volunteer Service Time</p>
         </li>
         <li>
           <p>Pray for the Ministry and Those We Serve</p>

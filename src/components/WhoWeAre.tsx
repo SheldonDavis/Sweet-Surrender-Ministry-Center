@@ -59,8 +59,8 @@ function WhoWeAre(props: Properties) {
       <section id='WhoWeAre' className={classes}>
         <h3>Who Is SSMC</h3>
         <p>
-          Sweet Surrender Ministry Center (SSMC) is a 501(c)(3) nonprofit newly organized in October 2023 that seeks to provide charitable services to
-          individuals and families of Bedford County, PA and surrounding communities.
+          Sweet Surrender Ministry Center (SSMC) is a faith-based 501(c)(3) nonprofit that seeks to provide charitable services to individuals and
+          families of Bedford County, PA and surrounding communities.
         </p>
       </section>
     </>

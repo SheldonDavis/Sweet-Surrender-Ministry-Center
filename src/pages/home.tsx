@@ -44,8 +44,8 @@ function Home() {
     <>
       <h1>Sweet Surrender Ministry Center</h1>
       <div className={`sideToSide`}>
-        <WhoWeAre classes={``} />
-        <VisionForTheFuture classes={`coloredBG light`} />
+        <WhoWeAre classes={`coloredBG light`} />
+        {/* <VisionForTheFuture classes={`coloredBG light`} /> */}
       </div>
       <Mission classes={``} />
       <CoreValues classes={``} />

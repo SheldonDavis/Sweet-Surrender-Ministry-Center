@@ -11,9 +11,7 @@ function ProjectsList() {
       id: `1`,
       title: `Birthday Blessing Box`,
       image: birthdayBlessingBox,
-      description: [
-        `A birthday party in a cakebox is given to elementary school aged children who may not otherwise receive a celebration for their special day.  `,
-      ],
+      description: [`A birthday party pack for elementary school aged children who may not otherwise receive a celebration for their special day.`],
       readMore: [
         `Boxes include a cake mix, round pan, can of soda for cake mixture with recipe card, icing, candles, birthday card, crown, stickers, a bow, party favors, fun socks, age-appropriate STEM activity, and other small gifts.`,
       ],
@@ -29,7 +27,7 @@ function ProjectsList() {
       title: `H.O.P.E. Box`,
       image: HopeBox,
       description: [
-        `Boxes are available to individuals and families whether out of an emergency crisis or needs-based for: food staples, basic hygiene supplies, household cleaning products, necessary travel gas cards, or other circumstantial necessities.`,
+        `Boxes are available whether out of an emergency crisis or needs-based for: food staples, basic hygiene supplies, household cleaning products, necessary travel gas cards, or other circumstantial necessities.`,
       ],
       readMore: [],
       wishlist: [
@@ -57,9 +55,7 @@ function ProjectsList() {
       id: `3`,
       title: `Manna Monday`,
       image: MannaMonday,
-      description: [
-        `Beginning with one Monday per month, free meal of sustenance is offered to anyone whether by need of physical hunger, social hunger, or spiritual hunger.`,
-      ],
+      description: [`A free meal of sustenance offered whether by need of physical hunger, social hunger, or spiritual hunger.`],
       readMore: [],
       wishlist: [
         {
@@ -73,7 +69,7 @@ function ProjectsList() {
       title: `Second Chance`,
       image: SecondChance,
       description: [
-        `A mentorship style program for individuals who have struggled on their own to overcome barriers and who present a true desire to change life patterns toward becoming productive members of their community.`,
+        `A mentorship program for those who have struggled on their own to overcome barriers and who present a true desire to change life patterns toward becoming productive members of their community.`,
       ],
       readMore: [
         `Mentors meet with the individual first to establish a goals plan followed by a yearlong schedule of progressive accountability meetings with Biblical application. Upon successful completion, individuals will have learned certain life skills and/or trades to have reached or be well established on their way to attain their original goals plan.`,
@@ -130,8 +126,6 @@ function ProjectsList() {
             />
           );
         })}
-
-        {/* <Project title={`testing`} image={`file path`} description={[`this`,`is`,`it`]} orientation={true} /> */}
       </section>
       <section id={`ExpandingOpportunities`} className={`coloredBG light`}>
         <h2>Expanding Opportunities</h2>
